@@ -1,0 +1,190 @@
+/* ==========================================================================
+   About Page Styles - Kiểu dáng dành riêng cho trang Giới thiệu (about.html)
+   Bao gồm: Phần biểu ngữ mở đầu (Hero banner) và Khung hiển thị các thẻ thành viên.
+   ========================================================================== */
+
+/* ==========================================================================
+   About Page Hero Banner - Biểu ngữ mở đầu trang Giới thiệu
+   ========================================================================== */
+
+/* Khung nền tối phủ ảnh nhà hàng và tạo khoảng đệm đầu trang */
+.about_hero {
+    width: 100%;
+    position: relative;
+    background-image: linear-gradient(rgba(22, 19, 17, 0.78), rgba(22, 19, 17, 0.88)), url("../assets/restaurant_bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 220px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Vùng căn giữa nội dung văn bản */
+.about_hero_content {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 24px 0 100px 0;
+    box-sizing: border-box;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Tiêu đề chính lớn màu trắng */
+.about_hero_title {
+    font-family: "Lora", 'Times New Roman', serif;
+    font-size: 3.4rem;
+    font-weight: 600;
+    font-style: italic;
+    color: #ffffff;
+    margin: 0 0 16px 0;
+    line-height: 1.2;
+}
+
+/* Phụ đề nghiêng màu kem sáng */
+.about_hero_subtitle {
+    font-family: "Lora", 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: #f3ede2;
+    margin: 0 0 20px 0;
+}
+
+/* Đoạn mô tả giới thiệu mục đích trang web */
+.about_hero_desc {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #d6d3d1;
+    max-width: 680px;
+    margin: 0 auto 40px auto;
+}
+
+/* ==========================================================================
+   Member Cards Grid & Details - Lưới và thẻ thông tin thành viên
+   ========================================================================== */
+
+/* Khung bao ngoài nền trắng */
+.team_wrapper {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 100px 0 100px;
+    box-sizing: border-box;
+}
+
+/* Khu vực giới hạn độ rộng ở giữa màn hình */
+.team_section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Lưới hiển thị các thẻ thành viên thành 3 cột đều nhau */
+.members_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    text-align: left;
+    align-items: stretch;
+    margin-top: 20px;
+}
+
+/* Từng thẻ thành viên: nền trắng ngà, bo góc và viền xanh rêu nhẹ */
+.member_card {
+    background-color: #fffefb;
+    border: 1px solid rgba(0, 104, 54, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    padding: 24px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Ảnh đại diện tròn */
+.member_avatar {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(0, 104, 54, 0.4);
+    margin-bottom: 16px;
+    display: block;
+}
+
+/* Tên thành viên */
+.member_name {
+    font-family: "Lora", 'Times New Roman', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #542813;
+    margin: 0 0 14px 0;
+    text-align: center;
+}
+
+/* Vùng chứa thông tin chi tiết (MSV, Lớp, Sở thích, Điểm mạnh) */
+.member_info {
+    width: 100%;
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.9rem;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* Khoảng cách giữa các dòng thông tin */
+.member_info p {
+    margin: 6px 0;
+}
+
+/* Tiêu đề nhóm mục con (Sở thích, Điểm mạnh) */
+.member_info h4 {
+    font-family: "Lora", 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: #E3502D;
+    margin: 14px 0 6px 0;
+    border-bottom: 1px dashed rgba(84, 40, 19, 0.2);
+    padding-bottom: 4px;
+}
+
+/* Danh sách sở thích (ul) và điểm mạnh (ol) */
+.member_info ul,
+.member_info ol {
+    margin: 6px 0 12px 0;
+    padding-left: 20px;
+}
+
+.member_info li {
+    margin-bottom: 4px;
+}
+
+/* ==========================================================================
+   About Page Responsive Breakpoints - Tương thích màn hình nhỏ
+   ========================================================================== */
+
+/* Màn hình máy tính bảng (<= 992px): Chuyển thành 2 cột */
+@media (max-width: 992px) {
+    .members_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about_hero_title {
+        font-size: 2.7rem;
+    }
+}
+
+/* Màn hình điện thoại (<= 640px): Chuyển thành 1 cột */
+@media (max-width: 640px) {
+    .members_grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about_hero_title {
+        font-size: 2.2rem;
+    }
+}

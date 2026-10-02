@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu thành viên - Ẩm thực Việt Nam</title>
+    <!-- CSS dùng chung (navbar, footer, reset) và CSS riêng cho trang giới thiệu -->
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/about.css">
+</head>
+
+<body>
+    <!-- =================================================================
+         Navigation Bar - Thanh điều hướng đầu trang
+         ================================================================= -->
+    <div class="navbar">
+        <!-- Logo thương hiệu, bấm vào sẽ quay về trang chủ -->
+        <a href="./index.html" class="logo_link">
+            <p class="logo">Ẩm thực Việt Nam</p>
+        </a>
+        <!-- Các liên kết điều hướng qua các trang -->
+        <div class="nav_link">
+            <a href="./index.html">Trang chủ</a>
+            <a href="./bac.html">Miền Bắc</a>
+            <a href="./trung.html">Miền Trung</a>
+            <a href="./nam.html">Miền Nam</a>
+            <!-- Class nav_active dùng để gạch chân/tô màu trang hiện tại -->
+            <a href="./about.html" class="nav_active">Giới thiệu</a>
+        </div>
+    </div>
+
+    <!-- =================================================================
+         Hero Header Banner Section - Phần biểu ngữ đầu trang Giới thiệu
+         ================================================================= -->
+    <div class="about_hero">
+        <div class="about_hero_content">
+            <h1 class="about_hero_title">Giới Thiệu Thành Viên</h1>
+            <p class="about_hero_subtitle">Những người trẻ mang niềm đam mê và tự hào với ẩm thực Việt</p>
+            <p class="about_hero_desc">
+                Dự án website "Ẩm thực Việt Nam" được phát triển bởi nhóm sinh viên khoa Công nghệ Thông tin - Trường
+                Đại học Công nghệ Đông Á (EAUT), nhằm tôn vinh nét đẹp văn hóa ẩm thực ba miền.
+            </p>
+        </div>
+        <!-- Dải màu trắng chuyển mờ để nối mượt xuống phần nội dung dưới -->
+        <div class="white_gradient"></div>
+    </div>
+
+    <!-- =================================================================
+         Team Members Section - Khu vực danh sách thẻ thành viên nhóm
+         ================================================================= -->
+    <div class="team_wrapper">
+        <div class="team_section">
+            <!-- Tiêu đề và mô tả phần giới thiệu nhóm -->
+            <h2 class="gateway_title">Gặp Gỡ Đội Ngũ</h2>
+            <p class="gateway_desc">
+                Thông tin chi tiết về từng thành viên tham gia nghiên cứu và xây dựng website ẩm thực ba miền.
+            </p>
+            <!-- Đường kẻ trang trí ngăn cách -->
+            <div class="gateway_line"></div>
+
+            <!-- Lưới hiển thị các thẻ thành viên (3 cột trên máy tính) -->
+            <div class="members_grid">
+
+                <!-- Thẻ Thành viên 1: Lã Phúc Thanh -->
+                <div class="member_card">
+                    <!-- Ảnh đại diện dạng tròn -->
+                    <img class="member_avatar" src="./assets/members/thanh.jpg" alt="Lã Phúc Thanh">
+                    <h3 class="member_name">Lã Phúc Thanh</h3>
+
+                    <!-- Khung thông tin cá nhân cơ bản -->
+                    <div class="member_info">
+                        <p><strong>Mã sinh viên:</strong> 25002894</p>
+                        <p><strong>Ngày sinh:</strong> 12/12/2007</p>
+                        <p><strong>Lớp:</strong> DCCNTT 16.3</p>
+                        <p><strong>Trường:</strong> Đại học Công nghệ Đông Á</p>
+
+                        <!-- Danh sách sở thích (thẻ ul không thứ tự) -->
+                        <h4>Sở thích</h4>
+                        <ul>
+                            <li>Học tập</li>
+                            <li>Tìm hiểu code</li>
+                            <li>Thiết kế web</li>
+                        </ul>
+
+                        <!-- Danh sách điểm mạnh (thẻ ol có đánh số thứ tự) -->
+                        <h4>Điểm mạnh</h4>
+                        <ol>
+                            <li>Tiếp thu nhanh</li>
+                            <li>Dễ hiểu kiến thức mới</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Thẻ Thành viên 2: Hoàng Thị Yến Nhi -->
+                <div class="member_card">
+                    <img class="member_avatar" src="./assets/members/nhi.jpg" alt="Hoàng Thị Yến Nhi">
+                    <h3 class="member_name">Hoàng Thị Yến Nhi</h3>
+
+                    <div class="member_info">
+                        <p><strong>Mã sinh viên:</strong> 25002672</p>
+                        <p><strong>Ngày sinh:</strong> 19/10/2007</p>
+                        <p><strong>Lớp:</strong> DCCNTT 16.3</p>
+                        <p><strong>Trường:</strong> Đại học Công nghệ Đông Á</p>
+
+                        <h4>Sở thích</h4>
+                        <ul>
+                            <li>Đi du lịch</li>
+                            <li>Trải nghiệm ẩm thực</li>
+                        </ul>
+
+                        <h4>Điểm mạnh</h4>
+                        <ol>
+                            <li>Chăm chỉ học tập</li>
+                            <li>Giao tiếp tự tin</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Thẻ Thành viên 3: Nguyễn Ngọc Khánh -->
+                <div class="member_card">
+                    <img class="member_avatar" src="./assets/members/Khanh.jpg" alt="Nguyễn Ngọc Khánh">
+                    <h3 class="member_name">Nguyễn Ngọc Khánh</h3>
+
+                    <div class="member_info">
+                        <p><strong>Mã sinh viên:</strong> 25001692</p>
+                        <p><strong>Ngày sinh:</strong> 13/12/2007</p>
+                        <p><strong>Lớp:</strong> DCCNTT 16.2</p>
+                        <p><strong>Trường:</strong> Đại học Công nghệ Đông Á</p>
+
+                        <h4>Sở thích</h4>
+                        <ul>
+                            <li>Trải nghiệm điều mới mẻ</li>
+                            <li>Nghe nhạc</li>
+                            <li>Ăn uống</li>
+                        </ul>
+
+                        <h4>Điểm mạnh</h4>
+                        <ol>
+                            <li>Có khả năng hát</li>
+                            <li>Tự tin thể hiện bản thân</li>
+                        </ol>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- =================================================================
+         Solid Dark Footer - Chân trang màu tối dùng chung
+         ================================================================= -->
+    <div class="footer">
+        <div class="footer_content">
+            <h3 class="footer_logo">Ẩm thực Việt Nam</h3>
+            <p class="footer_desc">Hành trình tôn vinh và lan tỏa nét tinh hoa văn hóa ẩm thực ba miền Bắc - Trung -
+                Nam.</p>
+            <!-- Các liên kết chân trang -->
+            <div class="footer_links">
+                <a href="./index.html">Trang chủ</a>
+                <a href="./bac.html">Miền Bắc</a>
+                <a href="./trung.html">Miền Trung</a>
+                <a href="./nam.html">Miền Nam</a>
+                <a href="./about.html">Giới thiệu</a>
+            </div>
+            <div class="footer_divider"></div>
+            <!-- Dòng ghi chú bản quyền nhóm -->
+            <p class="footer_copy">Sản phẩm của Phúc Thanh, Ngọc Khánh, Yến Nhi</p>
+        </div>
+    </div>
+</body>
+
+</html>

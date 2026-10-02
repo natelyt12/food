@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ẩm thực Miền Nam - Tinh hoa ẩm thực Việt Nam</title>
+    <!-- Common styles for typography, navbar, and footer -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- Regional page styles for hero section and map display -->
+    <link rel="stylesheet" href="./css/region.css">
+</head>
+
+<body>
+    <!-- =================================================================
+         Navigation Bar - Header navigation bar
+         ================================================================= -->
+    <div class="navbar">
+        <!-- Brand logo link returning to homepage -->
+        <a href="./index.html" class="logo_link">
+            <p class="logo">Ẩm thực Việt Nam</p>
+        </a>
+        <!-- Navigation menu with Southern Vietnam page active -->
+        <div class="nav_link">
+            <a href="./index.html">Trang chủ</a>
+            <a href="./bac.html">Miền Bắc</a>
+            <a href="./trung.html">Miền Trung</a>
+            <a href="./nam.html" class="nav_active">Miền Nam</a>
+            <a href="./about.html">Giới thiệu</a>
+        </div>
+    </div>
+
+    <!-- =================================================================
+         Main Content Area - Southern Vietnam regional presentation
+         ================================================================= -->
+    <main>
+        <!-- Hero Section: Southern Vietnam introduction with regional map -->
+        <div class="hero_section">
+            <div class="hero_content">
+                <!-- Left Column: Title, slogan, description and CTA button -->
+                <div class="hero_left">
+                    <p class="sub_vn">Ẩm thực</p>
+                    <p class="vn">Miền Nam</p>
+                    <p class="hvds">Vị ngọt lành, hào sảng đất phương Nam</p>
+                    <p class="desc">
+                        Vào tới miền Nam thì đặc trưng ẩm thực lại mang nét dân dã, mộc mạc mà vô cùng phong phú. Người miền Nam thích các món ăn có vị ngọt, do đó thường nêm đường hoặc dùng nước dừa để nấu ăn. Với những nguyên liệu gần gũi, dễ kiếm cùng cách chế biến đơn giản nhưng các món ăn nơi đây lại khiến bạn phải nhớ mãi chỉ sau lần đầu nếm thử.
+                    </p>
+                    <!-- Jump button to the upcoming specialties section -->
+                    <a class="explore_now" href="#specialties">Khám phá ngay!</a>
+                </div>
+
+                <!-- Right Column: Regional SVG map of Southern Vietnam -->
+                <div class="hero_right">
+                    <object type="image/svg+xml" data="./assets/map-south.svg" class="hero_map" style="aspect-ratio: 325 / 235;" aria-label="Bản đồ Ẩm thực Miền Nam">
+                        <img src="./assets/map-south.svg" alt="Bản đồ Ẩm thực Miền Nam" class="hero_map">
+                    </object>
+                </div>
+            </div>
+
+            <!-- Bottom white gradient to transition smoothly into the next content section -->
+            <div class="white_gradient" id="specialties"></div>
+        </div>
+    </main>
+
+    <!-- =================================================================
+         Solid Dark Footer - Chân trang tối màu dùng chung
+         ================================================================= -->
+    <div class="footer">
+        <div class="footer_content">
+            <h3 class="footer_logo">Ẩm thực Việt Nam</h3>
+            <p class="footer_desc">Hành trình tôn vinh và lan tỏa nét tinh hoa văn hóa ẩm thực ba miền Bắc - Trung -
+                Nam.</p>
+            <div class="footer_links">
+                <a href="./index.html">Trang chủ</a>
+                <a href="./bac.html">Miền Bắc</a>
+                <a href="./trung.html">Miền Trung</a>
+                <a href="./nam.html">Miền Nam</a>
+                <a href="./about.html">Giới thiệu</a>
+            </div>
+            <div class="footer_divider"></div>
+            <p class="footer_copy">Sản phẩm của Phúc Thanh, Ngọc Khánh, Yến Nhi</p>
+        </div>
+    </div>
+</body>
+
+</html>

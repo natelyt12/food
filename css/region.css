@@ -1,0 +1,536 @@
+/* ==========================================================================
+   Kiểu dáng cho các trang vùng miền (bac.html, trung.html, nam.html)
+   Bao gồm: Phần mở đầu Hero, bản đồ 3 miền và các hiệu ứng đi kèm.
+   ========================================================================== */
+
+/* Khung bao ngoài phần Hero */
+.hero_section {
+    width: 100%;
+    background-image: url("../assets/image.jpg");
+    background-size: cover;
+    background-position: center top;
+    position: relative;
+}
+
+/* Khung chia 2 cột nội dung Hero (đồng bộ kích thước với index.html) */
+.hero_content {
+    background: transparent;
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 40px;
+    padding-top: 120px;
+    box-sizing: border-box;
+    gap: 60px;
+}
+
+/* Cột bên trái: Tiêu đề lớn, slogan, mô tả và nút bấm */
+.hero_left {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    font-family: "Lora", 'Times New Roman', Times, serif;
+    min-height: 520px;
+}
+
+/* Tiêu đề phụ nhỏ ("Ẩm thực") */
+.sub_vn {
+    font-size: 2em;
+    margin: 0;
+    font-weight: 500;
+    color: #542813;
+    line-height: normal;
+}
+
+/* Tiêu đề chính lớn ("Miền Bắc", "Miền Trung", "Miền Nam") */
+.vn {
+    font-size: 3.5em;
+    font-weight: 500;
+    font-style: italic;
+    margin: 0;
+    color: #E3502D;
+    line-height: normal;
+}
+
+/* Khẩu hiệu slogan có dải nơ màu xanh trang trí */
+.hvds {
+    position: relative;
+    color: white;
+    margin: 30px 0;
+    padding: 10px 30px 10px 0;
+    z-index: 1;
+    font-size: 1.2em;
+    line-height: normal;
+}
+
+.hvds::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150px;
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 104, 54, 0) 0%,
+        rgba(0, 104, 54, 1) 20%,
+        rgba(0, 104, 54, 1) 100%
+    );
+    width: calc(100% + 150px);
+    height: 100%;
+    z-index: -1;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+/* Đoạn văn bản giới thiệu ẩm thực miền */
+.desc {
+    font-size: 1.1em;
+    padding-right: 50px;
+    text-align: justify;
+}
+
+/* Nút bấm kêu gọi hành động "Khám phá ngay!" */
+.explore_now {
+    margin-top: 30px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    background-color: #E3502D;
+    color: white;
+    font-weight: 500;
+    font-family: "Open Sans", 'Times New Roman', Times, serif;
+    text-decoration: none;
+}
+
+.explore_now:hover {
+    background-color: #ff896c;
+    cursor: pointer;
+}
+
+/* Cột bên phải: Khung chứa bản đồ SVG góc nghiêng 3D */
+.hero_right {
+    flex: 1.2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    perspective: 900px;
+    perspective-origin: 30% 80%;
+    min-height: 520px;
+}
+
+/* Bản đồ SVG vùng miền với góc nhìn 3D từ dưới lên */
+.hero_map {
+    width: 100%;
+    max-width: 580px;
+    height: auto;
+    transform: rotateX(24deg) rotateY(-14deg) rotateZ(4deg);
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease;
+}
+
+/* Bản đồ Miền Trung dài dọc nên cần giới hạn kích thước để cân đối khung hình */
+.hero_map_central {
+    max-width: 380px;
+    max-height: 520px;
+    width: auto;
+}
+
+/* Tương thích giao diện trên màn hình nhỏ */
+@media screen and (max-width: 900px) {
+    .hero_content {
+        flex-direction: column;
+        padding-top: 100px;
+        gap: 40px;
+        padding-inline: 20px;
+    }
+
+    .hero_left {
+        align-items: center;
+        text-align: center;
+    }
+
+    .desc {
+        padding-right: 0;
+    }
+
+    .hvds::after {
+        left: -40px;
+        width: calc(100% + 80px);
+        border-radius: 50px;
+    }
+
+    .hero_map {
+        max-width: 460px;
+    }
+
+    .hero_map_central {
+        max-width: 290px;
+        max-height: 440px;
+    }
+}
+
+/* ==========================================================================
+   Regional Specialties Section Styles
+   Includes:
+   - Part 1: Full-width featured dishes (Image 1 style with feathered fade)
+   - Part 2: Three-column dish grid (Image 2 style with top image / bottom card)
+   ========================================================================== */
+
+/* Outer background wrapper for specialties */
+.specialties_wrapper {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 30px 0 100px;
+    box-sizing: border-box;
+}
+
+/* Centered container matching page content width */
+.specialties_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------------
+   Part 1: Featured Dishes (Phở Bò & Bún Chả) - Matching Image 1
+   -------------------------------------------------------------------------- */
+
+/* Featured dish card with rounded outer corners */
+.dish_featured_card {
+    background-color: #ffffff;
+    border-radius: 28px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 6px 28px rgba(0, 0, 0, 0.05);
+    margin-bottom: 45px;
+    border: 1px solid rgba(0, 104, 54, 0.1);
+    position: relative;
+}
+
+/* Reverse layout for alternating dish presentation */
+.dish_featured_card.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Text content column */
+.dish_text_col {
+    flex: 1.15;
+    padding: 44px 48px;
+    box-sizing: border-box;
+}
+
+/* Header group containing badge, title, and subtitle */
+.dish_header_group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 22px;
+}
+
+/* Inline 2D Province SVG fitting title and subtitle height */
+.hanoi_map_inline {
+    height: 68px;
+    width: auto;
+    aspect-ratio: 39 / 44;
+    flex-shrink: 0;
+    display: block;
+}
+
+/* Title and subtitle stack */
+.dish_title_group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Main dish title */
+.dish_title {
+    font-family: "Lora", 'Times New Roman', serif;
+    font-size: 2.35rem;
+    font-weight: 600;
+    color: #006836;
+    margin: 0 0 4px 0;
+    line-height: 1.2;
+}
+
+/* Dish subtitle / slogan */
+.dish_subtitle {
+    font-family: "Lora", 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #7d4323;
+    margin: 0;
+    line-height: normal;
+}
+
+/* Detailed dish narrative description */
+.dish_desc {
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.98rem;
+    line-height: 1.75;
+    color: #2c2c2c;
+    text-align: justify;
+    margin: 0;
+}
+
+/* Dish photo container */
+.dish_image_col {
+    flex: 1;
+    height: 430px;
+    position: relative;
+    overflow: hidden;
+}
+
+.dish_image_col img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* Left fade gradient overlay for Pho dish (photo on right) */
+.dish_image_col.fade_left::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 100%;
+    background: linear-gradient(to right, #ffffff 0%, rgba(255, 255, 255, 0.7) 40%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+}
+
+.dish_image_col.fade_left::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 18%;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Right fade gradient overlay for Bun Cha dish (photo on left) */
+.dish_image_col.fade_right::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25%;
+    height: 100%;
+    background: linear-gradient(to left, #ffffff 0%, rgba(255, 255, 255, 0.7) 40%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+}
+
+.dish_image_col.fade_right::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 18%;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Part 2: Three-column Dish Grid (Matching Image 2 Wireframe)
+   -------------------------------------------------------------------------- */
+
+/* Section header for the triplet grid */
+.specialties_grid_header {
+    text-align: center;
+    margin: 55px auto 40px auto;
+    max-width: 800px;
+}
+
+.specialties_grid_title {
+    font-family: "Lora", 'Times New Roman', serif;
+    font-size: 2.3rem;
+    font-weight: 600;
+    color: #006836;
+    font-style: italic;
+    margin: 0 0 10px 0;
+}
+
+.specialties_grid_subtitle {
+    font-family: "Lora", 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: #542813;
+    margin: 0 0 20px 0;
+}
+
+/* 3-column layout grid */
+.specialties_triplet_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    align-items: stretch;
+    margin-bottom: 20px;
+}
+
+/* Individual column with separate top image and bottom card */
+.triplet_column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Top Block: Photo container without hover scale */
+.triplet_img_box {
+    height: 220px;
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+.triplet_img_box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Floating province tag on the image with Lora italic font */
+.triplet_province_tag {
+    position: absolute;
+    bottom: 12px;
+    left: 14px;
+    background: rgba(0, 50, 25, 0.85);
+    backdrop-filter: blur(4px);
+    color: #ffffff;
+    font-family: "Lora", 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 5px 14px;
+    border-radius: 30px;
+    letter-spacing: 0.3px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* Bottom Block: Story content card with only hover border */
+.triplet_content_box {
+    flex: 1;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 104, 54, 0.16);
+    border-radius: 18px;
+    padding: 24px 22px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    transition: border-color 0.25s ease;
+}
+
+/* Hover effect restricted exclusively to card border */
+.triplet_column:hover .triplet_content_box {
+    border-color: #006836;
+}
+
+.triplet_dish_title {
+    font-family: "Lora", 'Times New Roman', serif;
+    font-size: 1.45rem;
+    font-weight: 600;
+    color: #006836;
+    margin: 0 0 6px 0;
+    line-height: 1.3;
+}
+
+.triplet_dish_subtitle {
+    font-family: "Lora", 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: #E3502D;
+    margin: 0 0 14px 0;
+    font-weight: 500;
+}
+
+.triplet_divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(0, 104, 54, 0.12);
+    margin-bottom: 16px;
+}
+
+.triplet_desc {
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.88rem;
+    line-height: 1.68;
+    color: #3b3b3b;
+    text-align: justify;
+    margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive adjustments for specialties
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 992px) {
+    .dish_featured_card,
+    .dish_featured_card.reverse {
+        flex-direction: column;
+    }
+
+    .dish_image_col {
+        width: 100%;
+        height: 320px;
+    }
+
+    .dish_image_col.fade_left::after,
+    .dish_image_col.fade_left::before,
+    .dish_image_col.fade_right::after,
+    .dish_image_col.fade_right::before {
+        display: none;
+    }
+
+    .dish_text_col {
+        padding: 32px 24px;
+    }
+
+    .dish_title {
+        font-size: 2rem;
+    }
+
+    .specialties_triplet_grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .dish_header_group {
+        gap: 14px;
+    }
+
+    .hanoi_map_inline {
+        height: 52px;
+    }
+
+    .dish_title {
+        font-size: 1.65rem;
+    }
+
+    .dish_subtitle {
+        font-size: 1rem;
+    }
+
+    .dish_image_col {
+        height: 230px;
+    }
+
+    .triplet_img_box {
+        height: 200px;
+    }
+}

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ẩm thực Miền Bắc - Tinh hoa ẩm thực Việt Nam</title>
+    <!-- Common styles for typography, navbar, and footer -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- Regional page styles for hero section and map display -->
+    <link rel="stylesheet" href="./css/region.css">
+</head>
+
+<body>
+    <!-- =================================================================
+         Navigation Bar - Header navigation bar
+         ================================================================= -->
+    <div class="navbar">
+        <!-- Brand logo link returning to homepage -->
+        <a href="./index.html" class="logo_link">
+            <p class="logo">Ẩm thực Việt Nam</p>
+        </a>
+        <!-- Navigation menu with Northern Vietnam page active -->
+        <div class="nav_link">
+            <a href="./index.html">Trang chủ</a>
+            <a href="./bac.html" class="nav_active">Miền Bắc</a>
+            <a href="./trung.html">Miền Trung</a>
+            <a href="./nam.html">Miền Nam</a>
+            <a href="./about.html">Giới thiệu</a>
+        </div>
+    </div>
+
+    <!-- =================================================================
+         Main Content Area - Northern Vietnam regional presentation
+         ================================================================= -->
+    <main>
+        <!-- Hero Section: Northern Vietnam introduction with regional map -->
+        <div class="hero_section">
+            <div class="hero_content">
+                <!-- Left Column: Title, slogan, description and CTA button -->
+                <div class="hero_left">
+                    <p class="sub_vn">Ẩm thực</p>
+                    <p class="vn">Miền Bắc</p>
+                    <p class="hvds">Vị thanh tao, đượm hồn đất Bắc</p>
+                    <p class="desc">
+                        Miền Bắc nước ta là vùng đất chịu nhiều ảnh hưởng từ các triều đại phong kiến, trong đó, thủ đô Hà Nội chính là nơi lưu giữ nhiều nét tinh hoa ẩm thực đặc trưng. Điểm chung của ẩm thực miền Bắc đó là sự đơn giản nhưng lại vô cùng tinh tế từ công đoạn chế biến, trình bày cho đến tên gọi của các món ăn.
+                    </p>
+                    <!-- Jump button to the upcoming specialties section -->
+                    <a class="explore_now" href="#specialties">Khám phá ngay!</a>
+                </div>
+
+                <!-- Right Column: Regional SVG map of Northern Vietnam -->
+                <div class="hero_right">
+                    <object type="image/svg+xml" data="./assets/map-north.svg" class="hero_map" style="aspect-ratio: 288 / 232;" aria-label="Bản đồ Ẩm thực Miền Bắc">
+                        <img src="./assets/map-north.svg" alt="Bản đồ Ẩm thực Miền Bắc" class="hero_map">
+                    </object>
+                </div>
+            </div>
+
+            <!-- Bottom white gradient to transition smoothly into the next content section -->
+            <div class="white_gradient" id="specialties"></div>
+        </div>
+
+        <!-- =================================================================
+             Regional Culinary Specialties Section - Part 1 & Part 2
+             ================================================================= -->
+        <section class="specialties_wrapper">
+            <div class="specialties_container">
+
+                <!-- ---------------------------------------------------------
+                     PART 1: Featured Dishes (Phở Bò & Bún Chả)
+                     Designed identical to Image 1 with feathered fade & rounded edges
+                     --------------------------------------------------------- -->
+
+                <!-- Dish 1: Phở Bò Hà Nội (Text on Left, Image on Right) -->
+                <article class="dish_featured_card">
+                    <div class="dish_text_col">
+                        <div class="dish_header_group">
+                            <svg viewBox="187 141 39 44" class="hanoi_map_inline" aria-label="Bản đồ Hà Nội 2D">
+                                <path d="M216.061 143.043L216.752 145.414L216.762 145.448L216.796 145.45L218.078 145.548L219.652 147.024L220.044 149.567L218.581 150.154L218.543 150.169L218.551 150.209L219.446 154.685L218.862 155.368L218.838 155.396L218.858 155.427L220.158 157.427L220.17 157.445L220.19 157.449L223.169 158.044L223.943 159.305L223.062 161.559L221.185 162.153L221.143 162.165L221.15 162.209L221.338 163.243L218.806 162.951L218.748 162.944L218.75 163.001L218.849 165.681L218.062 166.567L218.034 166.599L218.062 166.631L219.831 168.794L218.767 169.763L218.742 169.785L218.752 169.815L219.452 172.015L219.46 172.037L219.481 172.046L221.453 172.834L221.851 176.406L221.856 176.457L221.907 176.45L223.093 176.267L221.883 178.035L220.322 177.255L220.296 177.243L220.271 177.259L218.084 178.75L215.099 178.85L215.084 178.851L215.071 178.859L214.071 179.559L214.057 179.57L214.052 179.587L213.159 182.856L212.121 183.045L210.84 181.37L210.825 181.35H209.133L207.357 177.406L207.94 176.63L207.963 176.6L207.939 176.57L206.248 174.381L205.95 170.197L205.947 170.164L205.917 170.153L204.018 169.453L203.99 169.443L203.968 169.461L202.324 170.83L203.246 168.62L203.26 168.587L203.233 168.563L202.059 167.486L203.046 165.12L203.075 165.05H199.312L196.632 163.76L193.839 160.369L193.82 160.346L193.791 160.351L190.424 160.945L189.355 159.196L190.646 156.019L190.656 155.994L190.641 155.971L189.057 153.694L189.639 152.435L191.624 151.344L191.644 151.333L191.648 151.312L192.64 147.245L194.584 147.052L196.257 148.529L197.652 152.816L197.657 152.83L197.67 152.84L198.87 153.74L198.881 153.748L198.894 153.749L202.094 154.15L202.107 154.152L202.12 154.146L204.92 152.946L204.955 152.931L204.949 152.893L204.753 151.522L207.11 149.853L209.888 150.548L209.953 150.565L209.95 150.497L209.851 148.619L211.736 146.634L211.743 146.627L211.746 146.619L212.847 143.819L213.525 142.655L216.061 143.043Z" fill="#006836" stroke="#004d26" stroke-width="0.3" />
+                            </svg>
+                            <div class="dish_title_group">
+                                <h2 class="dish_title">Phở Bò Hà Nội</h2>
+                                <p class="dish_subtitle">Tinh hoa đất kinh kỳ</p>
+                            </div>
+                        </div>
+                        <p class="dish_desc">
+                            Phở bò là linh hồn và là biểu tượng vẹn nguyên nhất của ẩm thực Thăng Long nghìn năm. Giá trị cốt lõi làm nên bát phở trứ danh nằm ở nồi nước dùng trong vắt nhưng đậm đà, được ninh từ xương bò suốt hơn mười tiếng đồng hồ cùng gừng nướng cháy xém, hành khô, quế chi và thảo quả. Bánh phở mỏng mướt, dẻo dai hòa cùng những lát thịt bò thái mỏng tái mềm, phủ ngập sắc xanh của hành hoa chẻ sợi và rau mùi tàu. Bưng bát phở bốc khói nghi ngút, vắt nhẹ lát chanh cốm và thêm chút giấm tỏi ớt, thực khách sẽ cảm nhận trọn vẹn vị ngọt thanh khiết nguyên bản mà không hề vướng chút ngấy ngậy.
+                        </p>
+                    </div>
+                    <div class="dish_image_col fade_left">
+                        <img src="./assets/bac/phobos.jpg" alt="Phở Bò Hà Nội">
+                    </div>
+                </article>
+
+                <!-- Dish 2: Bánh Đa Cua Hải Phòng (Image on Left, Text on Right) -->
+                <article class="dish_featured_card reverse">
+                    <div class="dish_text_col">
+                        <div class="dish_header_group">
+                            <svg viewBox="200 175 52 41" class="hanoi_map_inline" aria-label="Bản đồ Hải Phòng 2D">
+                                <path d="M224.551 177.227L224.65 179.402L224.651 179.417L224.658 179.428L225.676 180.954L225.707 180.95L228.763 180.555L229.352 182.713L229.355 182.73L229.37 182.74L231.254 184.128L231.851 187.109L231.856 187.138L231.884 187.147L233.648 187.735L233.55 190.698L233.548 190.744L233.594 190.75L236.062 191.046L236.442 192.188L235.061 193.868L235.025 193.911L235.072 193.942L236.272 194.742L236.303 194.762L236.331 194.739L239.298 192.364L243.367 195.938L243.376 195.945L243.388 195.949L245.688 196.549L245.705 196.553L245.722 196.545L248.188 195.36L249.962 197.231V197.232L250.52 197.884L245.981 200.152L242.29 200.852L242.281 200.854L242.273 200.858L240.073 202.258L240.1 202.3L240.071 202.256L240.062 202.267L234.163 208.867L234.161 208.869L230.688 213.134L229.626 212.458L229.601 212.441L229.573 212.457L227.773 213.557L227.767 213.562L226.207 214.926L224.263 212.399L225.54 210.73L225.545 210.724L225.548 210.716L226.548 207.615L226.568 207.55H221.221L219.435 205.765L219.43 205.759L219.423 205.756L213.224 202.456L213.225 202.455L213.214 202.452L210.726 201.755L206.435 197.465L206.431 197.461L203.831 195.361L203.82 195.353L203.806 195.351L202.234 195.153L201.271 193.039L203.089 192.752L208.073 195.843L208.104 195.861L208.131 195.839L210.131 194.239L210.165 194.212L210.143 194.175L208.125 190.812L211.479 192.346L211.559 192.382L211.55 192.295L211.253 189.331L213.086 188.56L214.663 190.333L214.68 190.353L214.706 190.35L216.405 190.149L216.456 190.144L216.449 190.093L216.05 187.394L216.046 187.37L216.026 187.358L213.338 185.665L212.171 183.137L213.209 182.949L213.24 182.944L213.248 182.913L214.142 179.63L215.115 178.949L218.102 178.85H218.116L218.128 178.841L220.303 177.357L221.916 178.164L221.94 178.128L223.212 176.271L224.551 177.227Z" fill="#006836" stroke="#004d26" stroke-width="0.3" />
+                            </svg>
+                            <div class="dish_title_group">
+                                <h2 class="dish_title">Bánh Đa Cua Hải Phòng</h2>
+                                <p class="dish_subtitle">Sắc đỏ đất Cảng</p>
+                            </div>
+                        </div>
+                        <p class="dish_desc">
+                            Bánh đa cua là niềm tự hào ẩm thực của người dân miền cửa biển Hải Phòng. Điểm nhận diện đặc trưng là sợi bánh đa đỏ tráng dày vừa phải, phơi qua sương gió để khi trần nước sôi vẫn giữ được độ dai dẻo không bị nát. Nước dùng được nấu từ cua đồng giã tay, nổi bật với từng mảng riêu cua béo bùi, thơm lừng hành phi mỡ nước và sắc đỏ của cà chua chín. Một tô bánh đa cua đất Cảng luôn đầy ắp sắc màu: màu xanh mướt của rau muống giòn chần tái, màu sẫm của chả lá lốt rán giòn, chả cá vàng ruộm và chút ớt chưng cay xé lưỡi, tạo nên một hương vị nồng đượm, đậm đà khó quên.
+                        </p>
+                    </div>
+                    <div class="dish_image_col fade_right">
+                        <img src="./assets/bac/banh-da-cua.jpg" alt="Bánh Đa Cua Hải Phòng">
+                    </div>
+                </article>
+
+                <!-- ---------------------------------------------------------
+                     PART 2: Three-column Dish Grid (Matching Image 2 Wireframe)
+                     Features: Bún Chả, Chả Mực, Thịt Dê
+                     --------------------------------------------------------- -->
+                <div class="specialties_grid_header">
+                    <h2 class="specialties_grid_title">Đặc Sản Vùng Miền Trứ Danh</h2>
+                    <p class="specialties_grid_subtitle">Khám phá những nét đặc sắc tinh túy của các tỉnh thành miền Bắc</p>
+                    <div class="gateway_line"></div>
+                </div>
+
+                <div class="specialties_triplet_grid">
+
+                    <!-- Column 1: Bún Chả Hà Nội -->
+                    <div class="triplet_column">
+                        <!-- Top Box: Image -->
+                        <div class="triplet_img_box">
+                            <img src="./assets/bac/buncha.webp" alt="Bún Chả Hà Nội">
+                            <span class="triplet_province_tag">Hà Nội</span>
+                        </div>
+                        <!-- Bottom Box: Content Card -->
+                        <div class="triplet_content_box">
+                            <h3 class="triplet_dish_title">Bún Chả Hà Nội</h3>
+                            <p class="triplet_dish_subtitle">Đượm khói bếp than hoa</p>
+                            <div class="triplet_divider"></div>
+                            <p class="triplet_desc">
+                                Bún chả hấp dẫn người qua đường từ chính mùi khói nướng thơm lừng lan tỏa khắp các ngõ phố cổ. Món ăn gồm hai loại chả: chả miếng làm từ thịt ba chỉ thái mỏng ướp mắm tiêu hành củ, và chả viên băm nhuyễn nắn tròn, tất cả được kẹp que tre hoặc nướng vỉ trên than củi hồng rực cho đến khi cháy xém cạnh. Điểm kết nối của món ăn là bát nước mắm pha ấm nóng đủ vị chua thanh của giấm bỗng, ngọt dịu của đường và mặn mòi của cốt mắm, thả thêm vài lát đu đủ xanh bóp giòn. Chấm từng gắp bún sợi nhỏ vào bát nước chấm ngập thịt nướng, ăn kèm lá tía tô, kinh giới, tạo nên sự bùng nổ hương vị đầy lôi cuốn.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Chả Mực Giã Tay Hạ Long -->
+                    <div class="triplet_column">
+                        <!-- Top Box: Image -->
+                        <div class="triplet_img_box">
+                            <img src="./assets/bac/chamuc.jpg" alt="Chả Mực Giã Tay Hạ Long">
+                            <span class="triplet_province_tag">Quảng Ninh</span>
+                        </div>
+                        <!-- Bottom Box: Content Card -->
+                        <div class="triplet_content_box">
+                            <h3 class="triplet_dish_title">Chả Mực Giã Tay Hạ Long</h3>
+                            <p class="triplet_dish_subtitle">Đậm đà vị biển</p>
+                            <div class="triplet_divider"></div>
+                            <p class="triplet_desc">
+                                Không dùng máy xay công nghiệp, chả mực Hạ Long nhất định phải được giã hoàn toàn bằng tay trong cối đá lớn để giữ trọn từng thớ thịt mực giòn sần sật. Nguyên liệu làm chả là những con mực mai tươi sống vừa đánh bắt từ vùng vịnh kín gió, thịt dày và ngọt đậm. Mực giã đạt độ kết dính tự nhiên, trộn cùng chút hạt tiêu bắc và hành thì là rồi nặn thành miếng dẹt thả vào chảo dầu sôi sùng sục. Miếng chả vừa vớt ra vàng ươm, căng phồng, cắn vào cảm nhận rõ độ dai giòn rôm rốp và vị ngọt đậm đà của biển cả, ngon nhất khi chấm tương ớt cay hoặc ăn kèm xôi trắng nóng hổi.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Column 3: Thịt Dê Núi Ninh Bình -->
+                    <div class="triplet_column">
+                        <!-- Top Box: Image -->
+                        <div class="triplet_img_box">
+                            <img src="./assets/bac/thitde.jpg" alt="Thịt Dê Núi Ninh Bình">
+                            <span class="triplet_province_tag">Ninh Bình</span>
+                        </div>
+                        <!-- Bottom Box: Content Card -->
+                        <div class="triplet_content_box">
+                            <h3 class="triplet_dish_title">Thịt Dê Núi Ninh Bình</h3>
+                            <p class="triplet_dish_subtitle">Sản vật non nước Cố đô</p>
+                            <div class="triplet_divider"></div>
+                            <p class="triplet_desc">
+                                Nhờ địa hình núi đá vôi đặc thù, dê Ninh Bình được chăn thả tự nhiên leo trèo trên vách đá và ăn các loại lá thuốc rừng, giúp thớ thịt săn chắc, ít mỡ và thơm ngọt khác biệt. Trong các cách chế biến, dê tái chanh là món ăn tôn vinh độ tươi ngon nguyên bản nhất: thịt dê thái lát mỏng trần chín tới, bóp đều với nước cốt chanh tươi, gừng, sả bào mỏng và lá chanh thái chỉ. Cuốn miếng thịt dê mềm ngọt cùng lá sung non, chuối chát, khế chua rồi chấm ngập trong chén tương gừng Bến Ngoại sánh vàng bùi béo, tạo nên sự cân bằng hoàn hảo giữa tính hàn và nhiệt của triết lý ẩm thực truyền thống.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =================================================================
+         Solid Dark Footer - Chân trang tối màu dùng chung
+         ================================================================= -->
+    <div class="footer">
+        <div class="footer_content">
+            <h3 class="footer_logo">Ẩm thực Việt Nam</h3>
+            <p class="footer_desc">Hành trình tôn vinh và lan tỏa nét tinh hoa văn hóa ẩm thực ba miền Bắc - Trung -
+                Nam.</p>
+            <div class="footer_links">
+                <a href="./index.html">Trang chủ</a>
+                <a href="./bac.html">Miền Bắc</a>
+                <a href="./trung.html">Miền Trung</a>
+                <a href="./nam.html">Miền Nam</a>
+                <a href="./about.html">Giới thiệu</a>
+            </div>
+            <div class="footer_divider"></div>
+            <p class="footer_copy">Sản phẩm của Phúc Thanh, Ngọc Khánh, Yến Nhi</p>
+        </div>
+    </div>
+</body>
+
+</html>

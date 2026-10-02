@@ -1,0 +1,364 @@
+/* ==========================================================================
+   trung.css — Central Vietnam Timeline Layout Styles
+   Used exclusively by trung.html for the vertical journey scroll section.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Timeline Section Wrapper
+   -------------------------------------------------------------------------- */
+
+/* Full-width white background section containing the timeline journey */
+.timeline_wrapper {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 40px 0 100px;
+    box-sizing: border-box;
+}
+
+/* Centered content container matching page max-width */
+.timeline_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------------
+   Section Header
+   -------------------------------------------------------------------------- */
+
+.timeline_header {
+    text-align: center;
+    margin-bottom: 60px;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.timeline_main_title {
+    font-family: "Lora", 'Times New Roman', serif;
+    font-size: 2.3rem;
+    font-weight: 600;
+    font-style: italic;
+    color: #006836;
+    margin: 0 0 12px 0;
+}
+
+.timeline_main_subtitle {
+    font-family: "Lora", 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #542813;
+    margin: 0 0 24px 0;
+    line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   Timeline Track — the vertical spine + all stops
+   -------------------------------------------------------------------------- */
+
+/* Outer container that holds the vertical green line via a pseudo-element */
+.timeline_track {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* The continuous vertical green line running through all stops */
+.timeline_track::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 104, 54, 0.15) 0%,
+        rgba(0, 104, 54, 0.6) 8%,
+        rgba(0, 104, 54, 0.6) 92%,
+        rgba(0, 104, 54, 0.1) 100%
+    );
+    z-index: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Individual Timeline Stop
+   -------------------------------------------------------------------------- */
+
+/* Each stop: two side columns + a centred node badge */
+.timeline_stop {
+    display: grid;
+    grid-template-columns: 1fr 56px 1fr;
+    grid-template-areas: "image node text";
+    column-gap: 40px;
+    align-items: center;
+    padding: 50px 0;
+    position: relative;
+}
+
+/* Reversed stop: text on left, image on right — just swap area names */
+.timeline_stop.reverse {
+    grid-template-areas: "text node image";
+}
+
+/* Bind each child to its named grid area */
+.timeline_stop .stop_image_col  { grid-area: image; }
+.timeline_stop .stop_text_col   { grid-area: text; }
+.timeline_stop .timeline_node   { grid-area: node; }
+
+/* --------------------------------------------------------------------------
+   Central Node Badge
+   -------------------------------------------------------------------------- */
+
+/* Circular numbered badge — always vertically centred in its grid cell */
+.timeline_node {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    z-index: 2;
+    position: relative;
+}
+
+.node_number {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: #006836;
+    color: #ffffff;
+    font-family: "Lora", 'Times New Roman', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 5px rgba(0, 104, 54, 0.12), 0 4px 16px rgba(0, 104, 54, 0.3);
+    flex-shrink: 0;
+    letter-spacing: 0.5px;
+}
+
+/* --------------------------------------------------------------------------
+   Image Column
+   -------------------------------------------------------------------------- */
+
+/* Shared image column wrapper — grid col 1 or 3 depending on stop */
+.stop_image_col {
+    position: relative;
+}
+
+/* The actual image container with rounded corners and overflow clip */
+.stop_img_wrap {
+    position: relative;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 4 / 3;
+}
+
+.stop_img_wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+/* Subtle zoom on hover */
+.timeline_stop:hover .stop_img_wrap img {
+    transform: scale(1.03);
+}
+
+/* Province name tag floating on the bottom-left of the image */
+.stop_province_badge {
+    position: absolute;
+    bottom: 14px;
+    left: 16px;
+    background: rgba(0, 50, 25, 0.85);
+    backdrop-filter: blur(5px);
+    color: #ffffff;
+    font-family: "Lora", 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 5px 16px;
+    border-radius: 30px;
+    letter-spacing: 0.3px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* --------------------------------------------------------------------------
+   Text Column
+   -------------------------------------------------------------------------- */
+
+.stop_text_col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Header row: province SVG badge + title stack */
+.stop_header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+/* Inline province SVG shape — same concept as bac.html's .hanoi_map_inline */
+.stop_province_svg {
+    height: 64px;
+    width: auto;
+    flex-shrink: 0;
+    display: block;
+}
+
+/* Title + subtitle vertical stack */
+.stop_title_group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Main dish name */
+.stop_dish_title {
+    font-family: "Lora", 'Times New Roman', serif;
+    font-size: 2.1rem;
+    font-weight: 600;
+    color: #006836;
+    margin: 0 0 4px 0;
+    line-height: 1.2;
+}
+
+/* Dish poetic subtitle / slogan */
+.stop_dish_subtitle {
+    font-family: "Lora", 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #7d4323;
+    margin: 0;
+    line-height: normal;
+}
+
+/* Detailed description paragraph */
+.stop_desc {
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.96rem;
+    line-height: 1.78;
+    color: #2c2c2c;
+    text-align: justify;
+    margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Timeline End Cap
+   -------------------------------------------------------------------------- */
+
+/* Final decorative element at the bottom of the timeline */
+.timeline_end_cap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding-top: 16px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Small filled circle closing the bottom of the timeline line */
+.end_cap_dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: rgba(0, 104, 54, 0.35);
+}
+
+.end_cap_text {
+    font-family: "Lora", 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: #a8a29e;
+    margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive — Tablet (≤ 900px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 900px) {
+    .timeline_stop {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        padding: 40px 0;
+        column-gap: 0;
+        row-gap: 24px;
+    }
+
+    /* Stack: node on top, then image, then text */
+    .timeline_node {
+        grid-column: 1;
+        grid-row: 1;
+        justify-content: flex-start;
+    }
+
+    .stop_image_col {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .stop_text_col {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    /* Reverse stops: same stacking order on mobile */
+    .timeline_stop.reverse {
+        direction: ltr;
+    }
+
+    .timeline_track::before {
+        left: 26px;
+    }
+
+    .stop_dish_title {
+        font-size: 1.7rem;
+    }
+
+    .timeline_main_title {
+        font-size: 1.85rem;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Responsive — Mobile (≤ 640px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 640px) {
+    .timeline_container {
+        padding: 0 16px;
+    }
+
+    .stop_header {
+        gap: 12px;
+    }
+
+    .stop_province_svg {
+        height: 50px;
+    }
+
+    .stop_dish_title {
+        font-size: 1.45rem;
+    }
+
+    .stop_dish_subtitle {
+        font-size: 0.95rem;
+    }
+
+    .timeline_main_title {
+        font-size: 1.55rem;
+    }
+
+    .timeline_main_subtitle {
+        font-size: 0.95rem;
+    }
+}

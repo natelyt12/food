@@ -1,0 +1,234 @@
+/* ==========================================================================
+   Common & Shared Styles - Các kiểu dáng CSS dùng chung cho toàn bộ website
+   Bao gồm: Font chữ, reset, thanh điều hướng (navbar), chân trang (footer),
+   và các class tiện ích dùng lại ở nhiều trang.
+   ========================================================================== */
+
+/* Nhúng font chữ Google Fonts: Lora (có chân, cổ điển) và Open Sans (không chân, hiện đại) */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Đặt box-sizing border-box cho toàn bộ thẻ để tính kích thước padding không làm vỡ khung */
+* {
+    box-sizing: border-box;
+}
+
+/* Định dạng thân trang web: hình nền nhà hàng mờ, cố định khi cuộn */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../assets/restaurant_bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* ==========================================================================
+   Navigation Bar Styles - Thanh điều hướng đầu trang
+   ========================================================================== */
+
+/* Chữ logo thương hiệu */
+.logo {
+    padding: 0;
+    margin: 0;
+    font-style: italic;
+}
+
+/* Thẻ liên kết bọc logo để có thể bấm về trang chủ */
+.logo_link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+}
+
+/* Khung thanh điều hướng nổi ở phía trên cùng màn hình */
+.navbar {
+    font-family: "Lora", 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 40px);
+    max-width: 1000px;
+    border-radius: 12px;
+    background-color: #fffefb;
+    box-sizing: border-box;
+    height: 50px;
+    z-index: 3;
+}
+
+/* Danh sách các nút liên kết trên thanh điều hướng */
+.nav_link {
+    display: flex;
+    gap: 30px;
+}
+
+/* Kiểu chữ của từng nút liên kết */
+.nav_link a {
+    text-decoration: none;
+    color: #542813;
+}
+
+/* Hiệu ứng khi rê chuột vào nút liên kết */
+.nav_link a:hover {
+    color: rgba(0, 104, 54, 1);
+    text-decoration: underline;
+}
+
+/* Đánh dấu nút trang hiện tại đang mở */
+.nav_link a.nav_active {
+    color: rgba(0, 104, 54, 1);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   Shared Utilities & Gradients - Các class tiện ích và dải chuyển màu dùng chung
+   ========================================================================== */
+
+/* Dải màu trắng mờ dần lên trên để nối mượt giữa banner và nội dung */
+.white_gradient {
+    width: 100%;
+    height: 200px;
+    background-image: linear-gradient(to top, #fff, transparent);
+}
+
+/* Dải màu trắng mờ dần xuống dưới */
+.white_gradient_flipped {
+    width: 100%;
+    height: 40px;
+    background-image: linear-gradient(to bottom, #fff, transparent);
+    margin-bottom: 10px;
+}
+
+/* Tiêu đề lớn của các phần nội dung (font có chân màu đỏ cam) */
+.gateway_title {
+    font-family: "Lora", 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 3.2rem;
+    font-weight: 500;
+    color: #E3502D;
+    margin: 0 0 18px 0;
+}
+
+/* Đoạn mô tả phụ dưới tiêu đề */
+.gateway_desc {
+    font-family: "Lora", 'Times New Roman', serif;
+    font-size: 1.15rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #542813;
+    max-width: 720px;
+    margin: 0 auto 30px auto;
+}
+
+/* Đường kẻ ngang trang trí màu nâu */
+.gateway_line {
+    width: 80px;
+    height: 1.5px;
+    background-color: #542813;
+    margin: 0 auto 55px auto;
+}
+
+/* ==========================================================================
+   Footer Styles - Chân trang màu tối (áp dụng đồng bộ mọi trang)
+   ========================================================================== */
+
+/* Khung nền tối bao quanh toàn bộ chân trang */
+.footer {
+    width: 100%;
+    background-color: #161311;
+    padding: 60px 20px 30px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Vùng nội dung giới hạn độ rộng ở giữa chân trang */
+.footer_content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Tên website ở chân trang */
+.footer_logo {
+    font-family: "Lora", 'Times New Roman', serif;
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin: 0 0 12px 0;
+}
+
+/* Đoạn mô tả tóm tắt sứ mệnh ở chân trang */
+.footer_desc {
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #a8a29e;
+    margin: 0 0 28px 0;
+}
+
+/* Danh sách link điều hướng ở chân trang */
+.footer_links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+}
+
+.footer_links a {
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.95rem;
+    color: #d6d3d1;
+    text-decoration: none;
+}
+
+.footer_links a:hover {
+    color: #ff7b5a;
+    text-decoration: underline;
+}
+
+/* Đường gạch ngang phân cách nhẹ */
+.footer_divider {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 0 auto 24px auto;
+}
+
+/* Dòng ghi chú bản quyền sản phẩm nhóm */
+.footer_copy {
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.85rem;
+    color: #78716c;
+    margin: 0;
+}
+
+/* ==========================================================================
+   Shared Responsive Breakpoints - Tương thích màn hình điện thoại (<= 640px)
+   ========================================================================== */
+@media (max-width: 640px) {
+
+    /* Navbar chuyển thành dạng khối xếp dọc khi màn hình nhỏ */
+    .navbar {
+        height: auto;
+        flex-direction: column;
+        gap: 10px;
+        padding: 12px 16px;
+    }
+
+    .nav_link {
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 0.9rem;
+    }
+
+    .gateway_title {
+        font-size: 2.2rem;
+    }
+}

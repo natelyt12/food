@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ẩm thực Việt Nam</title>
+    <!-- CSS dùng chung (navbar, footer, reset) và CSS riêng cho trang chủ -->
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/home.css">
+</head>
+
+<body>
+    <!-- =================================================================
+         Navigation Bar - Thanh điều hướng đầu trang
+         ================================================================= -->
+    <div class="navbar">
+        <!-- Logo trang chủ, bấm vào tải lại trang chủ -->
+        <a href="./index.html" class="logo_link">
+            <p class="logo">Ẩm thực Việt Nam</p>
+        </a>
+        <!-- Danh sách liên kết điều hướng (Trang chủ được in đậm bằng class nav_active) -->
+        <div class="nav_link">
+            <a href="./index.html" class="nav_active">Trang chủ</a>
+            <a href="./bac.html">Miền Bắc</a>
+            <a href="./trung.html">Miền Trung</a>
+            <a href="./nam.html">Miền Nam</a>
+            <a href="./about.html">Giới thiệu</a>
+        </div>
+    </div>
+
+    <!-- =================================================================
+         Hero Section - Phần mở đầu giới thiệu trang chủ
+         ================================================================= -->
+    <div class="hero_section">
+        <div class="hero_content">
+            <!-- Cột bên trái: Tiêu đề lớn, slogan và nút kêu gọi hành động -->
+            <div class="hero_left">
+                <p class="sub_vn">Ẩm thực</p>
+                <p class="vn">Việt Nam</p>
+                <p class="hvds">Hương vị đặc sắc từ ba miền</p>
+                <p class="desc">
+                    Hành trình khám phá nét tinh hoa văn hóa và sự hòa quyện trọn vẹn của đất trời trong từng món ăn
+                    truyền thống.
+                    Sự giao thoa giữa văn hóa lúa nước, gia vị tự nhiên và sự biến hóa tinh tế từ Bắc vào Nam.
+                </p>
+                <!-- Nút bấm cuộn nhanh xuống phần Cửa ngõ ba miền -->
+                <a class="explore_now" href="#gateway">Khám phá ngay!</a>
+            </div>
+
+            <!-- Cột bên phải: 2 cột chứa lưới 4 ảnh món ăn đẹp mắt -->
+            <div class="hero_right">
+                <div class="img_col">
+                    <img src="./assets/hero_image1.jpg" alt="Món ăn Việt 1">
+                    <img src="./assets/hero_image4.jpg" alt="Món ăn Việt 4">
+                </div>
+                <div class="img_col">
+                    <img src="./assets/hero_image2.jpg" alt="Món ăn Việt 2">
+                    <img src="./assets/hero_image3.jpg" alt="Món ăn Việt 3">
+                </div>
+            </div>
+        </div>
+
+        <!-- Dải chuyển màu trắng để kết nối mượt với phần bên dưới -->
+        <div class="white_gradient" id="gateway"></div>
+    </div>
+
+    <!-- =================================================================
+         Three Regions Gateway Section - Phần Cửa ngõ ẩm thực Ba Miền
+         ================================================================= -->
+    <div class="gateway_wrapper">
+        <div class="gateway_section">
+            <h2 class="gateway_title">Cửa ngõ Ba Miền</h2>
+            <p class="gateway_desc">
+                Mỗi dải đất mang một thanh âm riêng, từ sự tinh tế chốn kinh kỳ, nét<br>
+                đậm đà xứ gió lào, đến nét hào sảng miền sông nước.
+            </p>
+            <!-- Đường kẻ ngang trang trí -->
+            <div class="gateway_line"></div>
+
+            <!-- Danh sách 3 thẻ đại diện cho 3 miền Bắc - Trung - Nam -->
+            <div class="cards_list">
+
+                <!-- Thẻ 1: Miền Bắc -->
+                <div class="card">
+                    <img class="card_img" src="./assets/card_1.jpg" alt="Miền Bắc">
+                    <div class="card_body">
+                        <h3 class="card_title">Miền Bắc</h3>
+                        <p class="card_subtitle">Vị Thanh Nhã & Cội Nguồn</p>
+                        <p class="card_desc">
+                            Nổi bật với sự chuẩn mực, thanh đạm và ít dùng gia vị cay gắt. Món ăn miền Bắc chú trọng tôn
+                            vinh độ ngọt tự nhiên của nguyên liệu qua nghệ thuật ninh nước dùng thanh trong và cách bài
+                            trí khéo léo, tao nhã.
+                        </p>
+                        <p class="specialty_title">Món tiêu biểu:</p>
+                        <p class="specialty_dishes">Phở truyền thống, Bún chả, Bánh cuốn Thanh Trì, Chả cá Lã Vọng.</p>
+                        <!-- Nút dẫn sang trang chi tiết Miền Bắc -->
+                        <a href="./bac.html" class="card_btn">Khám phá Miền Bắc</a>
+                    </div>
+                </div>
+
+                <!-- Thẻ 2: Miền Trung -->
+                <div class="card">
+                    <img class="card_img" src="./assets/card_2.jpg" alt="Miền Trung">
+                    <div class="card_body">
+                        <h3 class="card_title">Miền Trung</h3>
+                        <p class="card_subtitle">Vị Đậm Đà & Khắc Khoải</p>
+                        <p class="card_desc">
+                            Bản giao hưởng mãnh liệt của vị cay nồng và mặn mòi hương biển. Ẩm thực nơi đây là sự giao
+                            thoa độc đáo giữa nét cầu kỳ, trang trọng của ẩm thực cung đình Huế cùng sự mộc mạc, đậm
+                            tình người dân dã xứ cát.
+                        </p>
+                        <p class="specialty_title">Món tiêu biểu:</p>
+                        <p class="specialty_dishes">Bún bò Huế, Mì Quảng, Bánh bèo - nậm - lọc, Cơm hến.</p>
+                        <!-- Nút dẫn sang trang chi tiết Miền Trung -->
+                        <a href="./trung.html" class="card_btn">Khám phá Miền Trung</a>
+                    </div>
+                </div>
+
+                <!-- Thẻ 3: Miền Nam -->
+                <div class="card">
+                    <img class="card_img" src="./assets/card_3.jpg" alt="Miền Nam">
+                    <div class="card_body">
+                        <h3 class="card_title">Miền Nam</h3>
+                        <p class="card_subtitle">Vị Phóng Khoáng & Trù Phú</p>
+                        <p class="card_desc">
+                            Đậm đà vị ngọt tự nhiên, béo ngậy từ nước cốt dừa và sự biến tấu đa dạng từ nguồn sản vật
+                            phù sa trù phú. Món ăn phương Nam mang phong cách mộc mạc, hào sảng và đầy ngẫu hứng như
+                            chính tính cách con người nơi đây.
+                        </p>
+                        <p class="specialty_title">Món tiêu biểu:</p>
+                        <p class="specialty_dishes">Cơm tấm sườn bì chả, Hủ tiếu Nam Vang, Canh chua cá lóc, Bánh xèo
+                            miền Tây.</p>
+                        <!-- Nút dẫn sang trang chi tiết Miền Nam -->
+                        <a href="./nam.html" class="card_btn">Khám phá Miền Nam</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- =================================================================
+         World Perspective Reviews Section - Ẩm Thực Việt Qua Lăng Kính Thế Giới
+         ================================================================= -->
+    <div class="world_section">
+        <div class="white_gradient_flipped"></div>
+
+        <div class="world_header">
+            <h2 class="world_title">Ẩm Thực Việt</h2>
+            <p class="world_subtitle">Qua Lăng Kính Thế Giới</p>
+            <div class="world_line"></div>
+            <p class="world_desc">
+                Những chia sẻ và cảm nhận đầy ngưỡng mộ từ các đầu bếp hàng đầu khi
+                chạm ngõ hương vị Việt Nam
+            </p>
+        </div>
+
+        <!-- Danh sách nhận xét từ các đầu bếp nổi tiếng -->
+        <div class="chef_list">
+
+            <!-- Đầu bếp 1: Anthony Bourdain -->
+            <div class="chef_strip">
+                <div class="chef_card">
+                    <img class="chef_img" src="./assets/anthony-bourdain.webp" alt="Anthony Bourdain">
+                    <div class="chef_info">
+                        <h3 class="chef_name">Anthony Bourdain</h3>
+                        <p class="chef_title">Cố đầu bếp kiêm nhà văn du lịch ẩm thực Mỹ</p>
+                        <p class="chef_quote">
+                            "Chuyến đi đầu tiên đến Việt Nam đã làm thay đổi hoàn toàn cuộc đời tôi. Mọi thứ ở đây dường
+                            như có một sự hòa quyện kỳ diệu, ngon lành và tràn đầy cảm xúc."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Đầu bếp 2: Gordon Ramsay (đảo chiều hiển thị bằng class reverse) -->
+            <div class="chef_strip">
+                <div class="chef_card reverse">
+                    <img class="chef_img" src="./assets/Gordon_Ramsay.jpg" alt="Gordon Ramsay">
+                    <div class="chef_info">
+                        <h3 class="chef_name">Gordon Ramsay</h3>
+                        <p class="chef_title">Bếp trưởng đạt sao Michelin, giám khảo MasterChef</p>
+                        <p class="chef_quote">
+                            "Tạ ơn Chúa là tôi không sinh ra ở Việt Nam, nếu không tôi chỉ là một đầu bếp tồi. Ở đây,
+                            người ta có sự chuẩn xác và tinh tế đáng kinh ngạc trong việc kết hợp các tầng hương vị thảo
+                            mộc."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Đầu bếp 3: Christine Hà -->
+            <div class="chef_strip">
+                <div class="chef_card">
+                    <img class="chef_img" src="./assets/Christine_Ha.jpg" alt="Christine Hà">
+                    <div class="chef_info">
+                        <h3 class="chef_name">Christine Hà</h3>
+                        <p class="chef_title">Quán quân MasterChef Mỹ mùa 3</p>
+                        <p class="chef_quote">
+                            "Ẩm thực Việt Nam là sự tương phản hoàn hảo: giòn và mềm, nóng và lạnh, chua và ngọt. Đó là
+                            một bản hòa âm của cảm giác được gói trọn trong từng bát nước chấm."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- =================================================================
+         Solid Dark Footer - Chân trang màu tối dùng chung
+         ================================================================= -->
+    <div class="footer">
+        <div class="footer_content">
+            <h3 class="footer_logo">Ẩm thực Việt Nam</h3>
+            <p class="footer_desc">Hành trình tôn vinh và lan tỏa nét tinh hoa văn hóa ẩm thực ba miền Bắc - Trung -
+                Nam.</p>
+            <div class="footer_links">
+                <a href="./index.html">Trang chủ</a>
+                <a href="./bac.html">Miền Bắc</a>
+                <a href="./trung.html">Miền Trung</a>
+                <a href="./nam.html">Miền Nam</a>
+                <a href="./about.html">Giới thiệu</a>
+            </div>
+            <div class="footer_divider"></div>
+            <!-- Dòng ghi chú bản quyền tác giả -->
+            <p class="footer_copy">Sản phẩm của Phúc Thanh, Ngọc Khánh, Yến Nhi</p>
+        </div>
+    </div>
+</body>
+
+</html>
