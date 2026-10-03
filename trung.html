@@ -5,275 +5,298 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ẩm thực Miền Trung - Tinh hoa ẩm thực Việt Nam</title>
-    <meta name="description" content="Khám phá ẩm thực miền Trung Việt Nam — nơi hội tụ tinh hoa cung đình Huế và hương vị đậm đà của dải đất miền Trung.">
-    <!-- Common styles for typography, navbar, and footer -->
+    <meta name="description"
+        content="Khám phá ẩm thực miền Trung Việt Nam — nơi hội tụ tinh hoa cung đình Huế và hương vị đậm đà của dải đất miền Trung.">
+    <!-- CSS dùng chung (navbar, footer, reset) và CSS riêng cho trang miền Trung -->
     <link rel="stylesheet" href="./css/common.css">
-    <!-- Regional page styles for hero section and map display -->
     <link rel="stylesheet" href="./css/region.css">
-    <!-- Central-specific timeline layout styles -->
     <link rel="stylesheet" href="./css/trung.css">
 </head>
 
 <body>
     <!-- =================================================================
-         Navigation Bar - Header navigation bar
+         1. THANH ĐIỀU HƯỚNG (HEADER & NAVBAR)
          ================================================================= -->
-    <div class="navbar">
-        <!-- Brand logo link returning to homepage -->
-        <a href="./index.html" class="logo_link">
-            <p class="logo">Ẩm thực Việt Nam</p>
-        </a>
-        <!-- Navigation menu with Central Vietnam page active -->
-        <div class="nav_link">
-            <a href="./index.html">Trang chủ</a>
-            <a href="./bac.html">Miền Bắc</a>
-            <a href="./trung.html" class="nav_active">Miền Trung</a>
-            <a href="./nam.html">Miền Nam</a>
-            <a href="./about.html">Giới thiệu</a>
-        </div>
-    </div>
+        <header class="navbar">
+            <a href="./index.html" class="logo_link">
+                <span class="logo">Ẩm thực Việt Nam</span>
+            </a>
+
+                <nav class="nav_link">
+                    <a href="./index.html">Trang chủ</a>
+                    <a href="./bac.html">Miền Bắc</a>
+                    <a href="./trung.html" class="nav_active">Miền Trung</a>
+                    <a href="./nam.html">Miền Nam</a>
+                    <a href="./about.html">Giới thiệu</a>
+    </nav>
+    </header>
 
     <!-- =================================================================
-         Main Content Area - Central Vietnam regional presentation
+         2. NỘI DUNG CHÍNH (MAIN CONTENT)
          ================================================================= -->
     <main>
-        <!-- Hero Section: Central Vietnam introduction with regional map -->
-        <div class="hero_section">
-            <div class="hero_content">
-                <!-- Left Column: Title, slogan, description and CTA button -->
-                <div class="hero_left">
-                    <p class="sub_vn">Ẩm thực</p>
-                    <p class="vn">Miền Trung</p>
-                    <p class="hvds">Vị đậm đà, sâu lắng tình miền Trung</p>
-                    <p class="desc">
-                        Tuy là một mảnh đất cằn cỗi, nắng lửa mưa dầu và không được thiên nhiên ưu ái nhưng miền Trung cũng có rất nhiều món ăn ngon mang hương vị đặc trưng. Ẩm thực miền Trung — đặc biệt là Huế — mang dấu ấn cung đình sâu sắc, cầu kỳ trong trình bày và đậm đà trong hương vị, tạo nên một nét văn hóa ẩm thực độc đáo không nơi nào có được.
-                    </p>
-                    <!-- Jump button to the timeline section -->
-                    <a class="explore_now" href="#specialties">Khám phá ngay!</a>
+            <!-- Phần mở đầu: Giới thiệu miền Trung và bản đồ tương tác -->
+            <section class="hero_section">
+                <div class="hero_content">
+                    <!-- Cột trái: Tiêu đề và mô tả ẩm thực miền Trung -->
+                    <div class="hero_left">
+                        <p class="sub_vn">Ẩm thực</p>
+                        <p class="vn">Miền Trung</p>
+                        <p class="hvds">Vị đậm đà, sâu lắng tình miền Trung</p>
+                        <p class="desc">
+                            Tuy là một mảnh đất cằn cỗi, nắng lửa mưa dầu và không được thiên nhiên ưu ái nhưng miền
+                            Trung cũng có rất nhiều món ăn ngon mang hương vị đặc trưng. Ẩm thực miền Trung — đặc biệt
+                            là Huế — mang dấu ấn cung đình sâu sắc, cầu kỳ trong trình bày và đậm đà trong hương vị, tạo
+                            nên một nét văn hóa ẩm thực độc đáo không nơi nào có được.
+                        </p>
+                        <a class="explore_now" href="#specialties">Khám phá ngay!</a>
+                    </div>
+
+                    <!-- Cột phải: Bản đồ SVG miền Trung 3D -->
+                    <div class="hero_right">
+                        <object type="image/svg+xml" data="./assets/map-central.svg" class="hero_map hero_map_central"
+                            style="aspect-ratio: 290 / 445;" aria-label="Bản đồ Ẩm thực Miền Trung">
+                        </object>
+                    </div>
                 </div>
 
-                <!-- Right Column: Regional SVG map of Central Vietnam -->
-                <div class="hero_right">
-                    <object type="image/svg+xml" data="./assets/map-central.svg" class="hero_map hero_map_central" style="aspect-ratio: 290 / 445;" aria-label="Bản đồ Ẩm thực Miền Trung">
-                        <img src="./assets/map-central.svg" alt="Bản đồ Ẩm thực Miền Trung" class="hero_map hero_map_central">
-                    </object>
-                </div>
-            </div>
+                <!-- Dải màu trắng chuyển mờ để nối mượt xuống phần nội dung dưới -->
+                <div class="white_gradient" id="specialties"></div>
+        </section>
 
-            <!-- Bottom white gradient to transition smoothly into the next content section -->
-            <div class="white_gradient" id="specialties"></div>
-        </div>
-
-        <!-- =================================================================
-             Timeline Specialties Section — Central Vietnam Journey
-             ================================================================= -->
+        <!-- Hành trình dòng thời gian ẩm thực Miền Trung -->
         <section class="timeline_wrapper">
             <div class="timeline_container">
 
-                <!-- Section Header -->
+                <!-- Tiêu đề phần hành trình -->
                 <div class="timeline_header">
                     <h2 class="timeline_main_title">Hành Trình Ẩm Thực Miền Trung</h2>
-                    <p class="timeline_main_subtitle">Từng trạm dừng chân, từng hương vị — một dải đất chứa đựng vô vàn tinh hoa</p>
+                    <p class="timeline_main_subtitle">Từng trạm dừng chân, từng hương vị — một dải đất chứa đựng vô vàn
+                        tinh hoa</p>
                     <div class="gateway_line"></div>
                 </div>
 
-                <!-- Vertical timeline track -->
+                <!-- Trục dòng thời gian dọc -->
                 <div class="timeline_track">
 
                     <!-- -------------------------------------------------
-                         STOP 01: Bún Bò Huế — Image LEFT, Text RIGHT
+                         TRẠM 01: Bún Bò Huế — Ảnh TRÁI, Chữ PHẢI
                          ------------------------------------------------- -->
-                    <div class="timeline_stop" id="stop-01">
-                        <!-- Connector: number badge sitting on the central line -->
-                        <div class="timeline_node">
-                            <span class="node_number">01</span>
-                        </div>
-
-                        <!-- Image column (left) -->
-                        <div class="stop_image_col stop_img_left">
-                            <div class="stop_img_wrap">
-                                <img src="./assets/trung/bunbo.jpg" alt="Bún Bò Huế">
-                                <div class="stop_province_badge">Thừa Thiên Huế</div>
+                        <article class="timeline_stop" id="stop-01">
+                            <!-- Nút số thứ tự trên trục dọc -->
+                            <div class="timeline_node">
+                                <span class="node_number">01</span>
                             </div>
-                        </div>
 
-                        <!-- Text column (right) -->
-                        <div class="stop_text_col stop_text_right">
-                            <div class="stop_header">
-                                <!-- Inline SVG: Thừa Thiên Huế province shape (prov-1) -->
-                                <svg viewBox="110 200 110 75" class="stop_province_svg" aria-label="Bản đồ Thừa Thiên Huế">
-                                    <path d="M213.7 245.7L212 248.5L210.4 249.8L210.5 254.9L208.3 255.9L207.3 255.3L205.1 258.4L204.8 261L205.6 265L209.5 267.4V268.8L211.5 271.8L210.8 272.8L211.9 275.3L209.9 276.1L208.2 278.5V280.1L205.7 281.3L204.7 280.7L201.2 281.9L199.4 279.1L196.1 280.2L192.7 280.6L188.7 278.4L186.3 280.2L184.3 279.5L184.8 277.6L181.7 275.3V274L177.7 274.3L176.2 272.4L172.5 272.8L172.3 271.1L171 270.5L165.6 270.6L162 269L161.6 267.8L159.9 268L157.6 265.5L155.2 264.8L153.5 261.2L151.3 259.9L149 260.7L146.6 257.2L142.2 255.4L141 254.1L138.7 254.5L138.4 252.7L136.2 250.3L132.6 249.6L131 247.9L128.1 248.5L125.8 247.7L123.6 245.2L121.7 244.4L125.3 242.4L126.4 240.4L130.9 239.6L132.5 234.3L132.8 232.1L130.5 229.7L131 226.5L134.1 227.5L135.9 226.2L138.8 225.3L142.1 225.8L143 226.5L147.8 225.7L148 227L151.2 228.1L151.8 229.5L154.8 229.9L156.8 228.9L158.5 229.3L159.3 225.7L162.1 223L167.6 220.6L168.2 217.2L167.9 214.6L170.3 213L171.3 211.1L177.4 213.8L179.7 213.9L183.6 215.2L184.2 217.8L182.5 218L181.4 220.5L181.7 223.6L183.1 224.6L183.2 226.4L187.8 228.6L188.7 232.3L188.1 234L189.3 236.7L191.2 233.9L194.5 237.9L198.2 238.2L200.2 237.2L203.6 241.9L205 241.3L208 245.1L210.7 244.2L211 245.2L213.7 245.7Z" fill="#006836" stroke="#004d26" stroke-width="0.5"/>
-                                </svg>
-                                <div class="stop_title_group">
-                                    <h2 class="stop_dish_title">Bún Bò Huế</h2>
-                                    <p class="stop_dish_subtitle">Linh hồn của đất cố đô</p>
+                            <!-- Cột hình ảnh -->
+                            <div class="stop_image_col stop_img_left">
+                                <div class="stop_img_wrap">
+                                    <img src="./assets/trung/bunbo.jpg" alt="Bún Bò Huế">
+                                    <div class="stop_province_badge">Thừa Thiên Huế</div>
                                 </div>
                             </div>
-                            <p class="stop_desc">
-                                Bún bò Huế là tiếng gọi thức giấc của cả thành phố — mỗi buổi sáng sớm, mùi sả nướng và mắm ruốc từ các gánh hàng rong đã lan tỏa khắp từng ngõ nhỏ. Điểm khác biệt làm nên linh hồn tô bún chính là nước dùng được ninh từ xương heo, giò heo và sả tươi giã dập, sau đó nêm mắm ruốc Huế đặc quánh — thứ gia vị không thể thiếu để tạo nên độ đậm đà nguyên bản và màu đỏ đặc trưng. Sợi bún to tròn mềm dai, điểm cùng lát thịt bò thái mỏng, chả cua nâu sẫm và viên giò heo thơm. Ăn kèm bắp chuối bào mỏng, rau thơm và muỗng ớt sa tế cay nồng — tô bún bò Huế là sự tổng hòa hoàn hảo giữa cay, mặn, ngọt và chua thanh.
-                            </p>
-                        </div>
-                    </div>
+
+                            <!-- Cột thông tin bài viết -->
+                            <div class="stop_text_col stop_text_right">
+                                <div class="stop_header">
+                                    <img src="./assets/trung/map-hue.svg" alt="Bản đồ Thừa Thiên Huế"
+                                        class="stop_province_svg">
+                                    <div class="stop_title_group">
+                                        <h2 class="stop_dish_title">Bún Bò Huế</h2>
+                                        <p class="stop_dish_subtitle">Linh hồn của đất cố đô</p>
+                                    </div>
+                                </div>
+                                <p class="stop_desc">
+                                    Bún bò Huế là tiếng gọi thức giấc của cả thành phố — mỗi buổi sáng sớm, mùi sả nướng
+                                    và mắm ruốc từ các gánh hàng rong đã lan tỏa khắp từng ngõ nhỏ. Điểm khác biệt làm
+                                    nên linh hồn tô bún chính là nước dùng được ninh từ xương heo, giò heo và sả tươi
+                                    giã dập, sau đó nêm mắm ruốc Huế đặc quánh — thứ gia vị không thể thiếu để tạo nên
+                                    độ đậm đà nguyên bản và màu đỏ đặc trưng. Sợi bún to tròn mềm dai, điểm cùng lát
+                                    thịt bò thái mỏng, chả cua nâu sẫm và viên giò heo thơm. Ăn kèm bắp chuối bào mỏng,
+                                    rau thơm và muỗng ớt sa tế cay nồng — tô bún bò Huế là sự tổng hòa hoàn hảo giữa
+                                    cay, mặn, ngọt và chua thanh.
+                                </p>
+                            </div>
+                    </article>
 
                     <!-- -------------------------------------------------
-                         STOP 02: Mì Quảng — Text LEFT, Image RIGHT
+                         TRẠM 02: Mì Quảng — Chữ TRÁI, Ảnh PHẢI
                          ------------------------------------------------- -->
-                    <div class="timeline_stop reverse" id="stop-02">
-                        <div class="timeline_node">
-                            <span class="node_number">02</span>
-                        </div>
+                        <article class="timeline_stop reverse" id="stop-02">
+                            <div class="timeline_node">
+                                <span class="node_number">02</span>
+                            </div>
 
-                        <!-- Text column (left) -->
-                        <div class="stop_text_col stop_text_left">
-                            <div class="stop_header">
-                                <!-- Inline SVG: Quảng Nam province shape (prov-3) -->
-                                <svg viewBox="205 295 90 100" class="stop_province_svg" aria-label="Bản đồ Quảng Nam">
-                                    <path d="M219.872 304.75L220.757 306.226L220.774 306.256L220.809 306.249L222.386 305.953L226.633 309.509L225.159 311.672L225.118 311.731L225.188 311.749L231.288 313.249L231.302 313.252L231.315 313.248L233.802 312.452L236.388 313.147L236.443 313.163L236.45 313.105L236.547 312.323L239.316 309.652L243.867 310.444L244.456 311.524L244.474 311.556L244.509 311.549L247.296 311.067L244.558 315.272L244.553 315.281L244.551 315.29L244.151 317.391L244.148 317.402L244.152 317.414L245.151 320.914L245.155 320.922L246.854 324.521L246.857 324.526L251.257 331.626L251.259 331.629L254.559 336.229L254.562 336.234L258.963 341.034L258.968 341.038L261.868 343.438L261.87 343.44L270.37 349.94L270.373 349.942L275.951 353.528L276.15 357.403L276.151 357.417L276.159 357.429L278.758 361.228L282.469 364.939L289.23 370.408L285.36 375.37L285.339 375.397L285.357 375.427L286.333 376.987L283.701 378.937L282.631 378.061L282.614 378.047L282.593 378.05L277.493 378.75L277.478 378.752L277.467 378.763L276.479 379.652L273.593 380.05L273.537 380.058L273.551 380.111L273.951 381.712L273.957 381.734L273.978 381.745L276.355 382.935L276.838 384.96L273.591 385.551L273.563 385.556L273.554 385.581L272.459 388.268L270.169 390.061L270.129 390.092L270.162 390.132L271.594 391.851H269.348L269.25 389.698L269.249 389.673L269.228 389.658L266.036 387.563L264.652 385.391L265.549 381.512L265.557 381.475L265.524 381.457L262.725 379.857L262.673 379.827L262.653 379.884L261.267 383.941L259.91 383.651L259.85 383.639V385.374L258.298 386.537L255.342 384.469L253.953 380.302L254.944 378.222L254.971 378.166L254.911 378.151L251.137 377.257L249.448 372.789L249.35 364.299V364.272L249.327 364.258L247.851 363.273L247.946 361.646L249.204 361.55L249.249 361.547L249.25 361.501L249.35 358.001L249.353 357.893L249.269 357.961L247.689 359.243L244.131 358.057L242.259 355.298L242.943 354.125L242.966 354.087L242.932 354.061L241.037 352.565L237.568 347.709L239.031 346.539L239.103 346.481L239.016 346.452L237.848 346.062L237.75 343.698L237.749 343.659L237.711 343.651L236.311 343.352L236.253 343.339L236.25 343.397L236.152 345.062L234.31 345.644L227.336 340.165L216.438 327.667L216.431 327.66L213.13 325.16L213.116 325.15H211.145L210.85 322.694L210.848 322.68L210.839 322.669L207.652 318.785L207.949 317.209L207.956 317.175L207.926 317.157L205.934 315.962L204.455 314.09L206.035 309.548L208.902 309.45L208.928 309.449L208.942 309.428L210.318 307.36L212.481 308.246L212.498 308.254L212.516 308.248L214.916 307.448L214.966 307.432L214.947 307.383L214.47 306.141L216.806 305.85L216.822 305.848L216.834 305.837L218.021 304.75H219.872Z" fill="#006836" stroke="#004d26" stroke-width="0.5"/>
-                                </svg>
-                                <div class="stop_title_group">
-                                    <h2 class="stop_dish_title">Mì Quảng</h2>
-                                    <p class="stop_dish_subtitle">Sắc vàng trù phú xứ Quảng</p>
+                            <div class="stop_text_col stop_text_left">
+                                <div class="stop_header">
+                                    <img src="./assets/trung/map-quangnam.svg" alt="Bản đồ Quảng Nam"
+                                        class="stop_province_svg">
+                                    <div class="stop_title_group">
+                                        <h2 class="stop_dish_title">Mì Quảng</h2>
+                                        <p class="stop_dish_subtitle">Sắc vàng trù phú xứ Quảng</p>
+                                    </div>
+                                </div>
+                                <p class="stop_desc">
+                                    Mì Quảng là bức tranh ẩm thực đa sắc của vùng đất Quảng Nam — Đà Nẵng, nơi mà một tô
+                                    mì nhỏ lại chứa đựng cả một thế giới nguyên liệu phong phú. Sợi mì làm từ bột gạo
+                                    tráng lớp mỏng rồi thái sợi rộng bản, có màu vàng tươi nhờ nghệ, ăn mềm mà không
+                                    nát. Nước nhưn — linh hồn của món ăn — được nấu từ tôm cua, thịt heo hay gà, đặc
+                                    sánh với màu cam đỏ quyến rũ của dầu điều và nghệ. Điều làm mì Quảng khác lạ là
+                                    lượng nước dùng rất ít, chỉ đủ "tưới" lên mặt mì, ăn cùng với bánh tráng nướng giòn
+                                    tan, đậu phộng rang thơm bùi và cả lá rau sống xanh mướt — một sự kết hợp đặc trưng
+                                    không thể tìm thấy ở bất cứ đâu khác.
+                                </p>
+                            </div>
+
+                            <div class="stop_image_col stop_img_right">
+                                <div class="stop_img_wrap">
+                                    <img src="./assets/trung/miquang.jpg" alt="Mì Quảng">
+                                    <div class="stop_province_badge">Quảng Nam</div>
                                 </div>
                             </div>
-                            <p class="stop_desc">
-                                Mì Quảng là bức tranh ẩm thực đa sắc của vùng đất Quảng Nam — Đà Nẵng, nơi mà một tô mì nhỏ lại chứa đựng cả một thế giới nguyên liệu phong phú. Sợi mì làm từ bột gạo tráng lớp mỏng rồi thái sợi rộng bản, có màu vàng tươi nhờ nghệ, ăn mềm mà không nát. Nước nhưn — linh hồn của món ăn — được nấu từ tôm cua, thịt heo hay gà, đặc sánh với màu cam đỏ quyến rũ của dầu điều và nghệ. Điều làm mì Quảng khác lạ là lượng nước dùng rất ít, chỉ đủ "tưới" lên mặt mì, ăn cùng với bánh tráng nướng giòn tan, đậu phộng rang thơm bùi và cả lá rau sống xanh mướt — một sự kết hợp đặc trưng không thể tìm thấy ở bất cứ đâu khác.
-                            </p>
-                        </div>
-
-                        <!-- Image column (right) -->
-                        <div class="stop_image_col stop_img_right">
-                            <div class="stop_img_wrap">
-                                <img src="./assets/trung/miquang.jpg" alt="Mì Quảng">
-                                <div class="stop_province_badge">Quảng Nam</div>
-                            </div>
-                        </div>
-                    </div>
+                    </article>
 
                     <!-- -------------------------------------------------
-                         STOP 03: Bánh Bèo Huế — Image LEFT, Text RIGHT
+                         TRẠM 03: Bánh Bèo Huế — Ảnh TRÁI, Chữ PHẢI
                          ------------------------------------------------- -->
-                    <div class="timeline_stop" id="stop-03">
-                        <div class="timeline_node">
-                            <span class="node_number">03</span>
-                        </div>
-
-                        <div class="stop_image_col stop_img_left">
-                            <div class="stop_img_wrap">
-                                <img src="./assets/trung/banhbeo.jpg" alt="Bánh Bèo Huế">
-                                <div class="stop_province_badge">Thừa Thiên Huế</div>
+                        <article class="timeline_stop" id="stop-03">
+                            <div class="timeline_node">
+                                <span class="node_number">03</span>
                             </div>
-                        </div>
 
-                        <div class="stop_text_col stop_text_right">
-                            <div class="stop_header">
-                                <svg viewBox="110 200 110 75" class="stop_province_svg" aria-label="Bản đồ Thừa Thiên Huế">
-                                    <path d="M213.7 245.7L212 248.5L210.4 249.8L210.5 254.9L208.3 255.9L207.3 255.3L205.1 258.4L204.8 261L205.6 265L209.5 267.4V268.8L211.5 271.8L210.8 272.8L211.9 275.3L209.9 276.1L208.2 278.5V280.1L205.7 281.3L204.7 280.7L201.2 281.9L199.4 279.1L196.1 280.2L192.7 280.6L188.7 278.4L186.3 280.2L184.3 279.5L184.8 277.6L181.7 275.3V274L177.7 274.3L176.2 272.4L172.5 272.8L172.3 271.1L171 270.5L165.6 270.6L162 269L161.6 267.8L159.9 268L157.6 265.5L155.2 264.8L153.5 261.2L151.3 259.9L149 260.7L146.6 257.2L142.2 255.4L141 254.1L138.7 254.5L138.4 252.7L136.2 250.3L132.6 249.6L131 247.9L128.1 248.5L125.8 247.7L123.6 245.2L121.7 244.4L125.3 242.4L126.4 240.4L130.9 239.6L132.5 234.3L132.8 232.1L130.5 229.7L131 226.5L134.1 227.5L135.9 226.2L138.8 225.3L142.1 225.8L143 226.5L147.8 225.7L148 227L151.2 228.1L151.8 229.5L154.8 229.9L156.8 228.9L158.5 229.3L159.3 225.7L162.1 223L167.6 220.6L168.2 217.2L167.9 214.6L170.3 213L171.3 211.1L177.4 213.8L179.7 213.9L183.6 215.2L184.2 217.8L182.5 218L181.4 220.5L181.7 223.6L183.1 224.6L183.2 226.4L187.8 228.6L188.7 232.3L188.1 234L189.3 236.7L191.2 233.9L194.5 237.9L198.2 238.2L200.2 237.2L203.6 241.9L205 241.3L208 245.1L210.7 244.2L211 245.2L213.7 245.7Z" fill="#006836" stroke="#004d26" stroke-width="0.5"/>
-                                </svg>
-                                <div class="stop_title_group">
-                                    <h2 class="stop_dish_title">Bánh Bèo Huế</h2>
-                                    <p class="stop_dish_subtitle">Tinh tế như lòng người Huế</p>
+                            <div class="stop_image_col stop_img_left">
+                                <div class="stop_img_wrap">
+                                    <img src="./assets/trung/banhbeo.jpg" alt="Bánh Bèo Huế">
+                                    <div class="stop_province_badge">Thừa Thiên Huế</div>
                                 </div>
                             </div>
-                            <p class="stop_desc">
-                                Bánh bèo là hiện thân của triết lý "ít mà sang" trong ẩm thực cung đình Huế. Mỗi chiếc bánh nhỏ bằng lòng bàn tay được hấp trong chén sành men trắng, bột gạo tráng mỏng trong suốt như tấm lụa, vừa hấp chín là đặt lên mặt bánh một nhúm tôm chấy đỏ hồng thơm lừng. Nước chấm là phần quan trọng nhất — nước mắm Huế chua ngọt pha với ớt đỏ thái sợi và tỏi phi vàng — rưới lên từng chén bánh bèo tạo nên vị mặn ngọt quyện cùng mùi thơm của dầu mỡ nóng. Ăn bánh bèo Huế là một nghi lễ của sự chậm rãi — người ta múc từng chén nhỏ, thưởng thức từng miếng, để cảm nhận trọn vẹn sự tinh tế ẩn chứa trong từng hạt bột.
-                            </p>
-                        </div>
-                    </div>
+
+                            <div class="stop_text_col stop_text_right">
+                                <div class="stop_header">
+                                    <img src="./assets/trung/map-hue.svg" alt="Bản đồ Thừa Thiên Huế"
+                                        class="stop_province_svg">
+                                    <div class="stop_title_group">
+                                        <h2 class="stop_dish_title">Bánh Bèo Huế</h2>
+                                        <p class="stop_dish_subtitle">Tinh tế như lòng người Huế</p>
+                                    </div>
+                                </div>
+                                <p class="stop_desc">
+                                    Bánh bèo là hiện thân của triết lý "ít mà sang" trong ẩm thực cung đình Huế. Mỗi
+                                    chiếc bánh nhỏ bằng lòng bàn tay được hấp trong chén sành men trắng, bột gạo tráng
+                                    mỏng trong suốt như tấm lụa, vừa hấp chín là đặt lên mặt bánh một nhúm tôm chấy đỏ
+                                    hồng thơm lừng. Nước chấm là phần quan trọng nhất — nước mắm Huế chua ngọt pha với
+                                    ớt đỏ thái sợi và tỏi phi vàng — rưới lên từng chén bánh bèo tạo nên vị mặn ngọt
+                                    quyện cùng mùi thơm của dầu mỡ nóng. Ăn bánh bèo Huế là một nghi lễ của sự chậm rãi
+                                    — người ta múc từng chén nhỏ, thưởng thức từng miếng, để cảm nhận trọn vẹn sự tinh
+                                    tế ẩn chứa trong từng hạt bột.
+                                </p>
+                            </div>
+                    </article>
 
                     <!-- -------------------------------------------------
-                         STOP 04: Cơm Hến — Text LEFT, Image RIGHT
+                         TRẠM 04: Cơm Hến — Chữ TRÁI, Ảnh PHẢI
                          ------------------------------------------------- -->
-                    <div class="timeline_stop reverse" id="stop-04">
-                        <div class="timeline_node">
-                            <span class="node_number">04</span>
-                        </div>
+                        <article class="timeline_stop reverse" id="stop-04">
+                            <div class="timeline_node">
+                                <span class="node_number">04</span>
+                            </div>
 
-                        <div class="stop_text_col stop_text_left">
-                            <div class="stop_header">
-                                <svg viewBox="110 200 110 75" class="stop_province_svg" aria-label="Bản đồ Thừa Thiên Huế">
-                                    <path d="M213.7 245.7L212 248.5L210.4 249.8L210.5 254.9L208.3 255.9L207.3 255.3L205.1 258.4L204.8 261L205.6 265L209.5 267.4V268.8L211.5 271.8L210.8 272.8L211.9 275.3L209.9 276.1L208.2 278.5V280.1L205.7 281.3L204.7 280.7L201.2 281.9L199.4 279.1L196.1 280.2L192.7 280.6L188.7 278.4L186.3 280.2L184.3 279.5L184.8 277.6L181.7 275.3V274L177.7 274.3L176.2 272.4L172.5 272.8L172.3 271.1L171 270.5L165.6 270.6L162 269L161.6 267.8L159.9 268L157.6 265.5L155.2 264.8L153.5 261.2L151.3 259.9L149 260.7L146.6 257.2L142.2 255.4L141 254.1L138.7 254.5L138.4 252.7L136.2 250.3L132.6 249.6L131 247.9L128.1 248.5L125.8 247.7L123.6 245.2L121.7 244.4L125.3 242.4L126.4 240.4L130.9 239.6L132.5 234.3L132.8 232.1L130.5 229.7L131 226.5L134.1 227.5L135.9 226.2L138.8 225.3L142.1 225.8L143 226.5L147.8 225.7L148 227L151.2 228.1L151.8 229.5L154.8 229.9L156.8 228.9L158.5 229.3L159.3 225.7L162.1 223L167.6 220.6L168.2 217.2L167.9 214.6L170.3 213L171.3 211.1L177.4 213.8L179.7 213.9L183.6 215.2L184.2 217.8L182.5 218L181.4 220.5L181.7 223.6L183.1 224.6L183.2 226.4L187.8 228.6L188.7 232.3L188.1 234L189.3 236.7L191.2 233.9L194.5 237.9L198.2 238.2L200.2 237.2L203.6 241.9L205 241.3L208 245.1L210.7 244.2L211 245.2L213.7 245.7Z" fill="#006836" stroke="#004d26" stroke-width="0.5"/>
-                                </svg>
-                                <div class="stop_title_group">
-                                    <h2 class="stop_dish_title">Cơm Hến</h2>
-                                    <p class="stop_dish_subtitle">Bữa sáng bình dị của đất Huế</p>
+                            <div class="stop_text_col stop_text_left">
+                                <div class="stop_header">
+                                    <img src="./assets/trung/map-hue.svg" alt="Bản đồ Thừa Thiên Huế"
+                                        class="stop_province_svg">
+                                    <div class="stop_title_group">
+                                        <h2 class="stop_dish_title">Cơm Hến</h2>
+                                        <p class="stop_dish_subtitle">Bữa sáng bình dị của đất Huế</p>
+                                    </div>
+                                </div>
+                                <p class="stop_desc">
+                                    Cơm hến là món ăn của những người dân lao động Huế — dân dã mà không kém phần tinh
+                                    tế. Hến được vớt từ cồn Hến giữa dòng sông Hương, luộc chín rồi lấy thịt, giữ nguyên
+                                    nước hến để làm canh. Cơm nguội — nhất định phải là cơm nguội — trộn với thịt hến
+                                    xào béo ngậy, rau sống thái sợi, bắp chuối bào mỏng, đậu phộng rang giòn và vô số
+                                    loại gia vị: mắm ruốc, ớt tương, tiêu xanh, mỡ hành. Bên cạnh là chén canh hến nóng
+                                    hổi uống thay nước — ngọt thanh mà đậm đà. Toàn bộ hương vị của cơm hến là một bản
+                                    nhạc phức tạp: béo, cay, mặn, ngọt, chua — tất cả cùng lúc, nhưng hòa quyện hoàn hảo
+                                    đến không ngờ.
+                                </p>
+                            </div>
+
+                            <div class="stop_image_col stop_img_right">
+                                <div class="stop_img_wrap">
+                                    <img src="./assets/trung/comhen.jpg" alt="Cơm Hến Huế">
+                                    <div class="stop_province_badge">Thừa Thiên Huế</div>
                                 </div>
                             </div>
-                            <p class="stop_desc">
-                                Cơm hến là món ăn của những người dân lao động Huế — dân dã mà không kém phần tinh tế. Hến được vớt từ cồn Hến giữa dòng sông Hương, luộc chín rồi lấy thịt, giữ nguyên nước hến để làm canh. Cơm nguội — nhất định phải là cơm nguội — trộn với thịt hến xào béo ngậy, rau sống thái sợi, bắp chuối bào mỏng, đậu phộng rang giòn và vô số loại gia vị: mắm ruốc, ớt tương, tiêu xanh, mỡ hành. Bên cạnh là chén canh hến nóng hổi uống thay nước — ngọt thanh mà đậm đà. Toàn bộ hương vị của cơm hến là một bản nhạc phức tạp: béo, cay, mặn, ngọt, chua — tất cả cùng lúc, nhưng hòa quyện hoàn hảo đến không ngờ.
-                            </p>
-                        </div>
-
-                        <div class="stop_image_col stop_img_right">
-                            <div class="stop_img_wrap">
-                                <img src="./assets/trung/comhen.jpg" alt="Cơm Hến Huế">
-                                <div class="stop_province_badge">Thừa Thiên Huế</div>
-                            </div>
-                        </div>
-                    </div>
+                    </article>
 
                     <!-- -------------------------------------------------
-                         STOP 05: Bánh Canh Bột Lọc — Image LEFT, Text RIGHT
+                         TRẠM 05: Bánh Canh Bột Lọc — Ảnh TRÁI, Chữ PHẢI
                          ------------------------------------------------- -->
-                    <div class="timeline_stop" id="stop-05">
-                        <div class="timeline_node">
-                            <span class="node_number">05</span>
-                        </div>
-
-                        <div class="stop_image_col stop_img_left">
-                            <div class="stop_img_wrap">
-                                <img src="./assets/trung/banhcanh.jpg" alt="Bánh Canh Bột Lọc">
-                                <div class="stop_province_badge">Quảng Bình</div>
+                        <article class="timeline_stop" id="stop-05">
+                            <div class="timeline_node">
+                                <span class="node_number">05</span>
                             </div>
-                        </div>
 
-                        <div class="stop_text_col stop_text_right">
-                            <div class="stop_header">
-                                <!-- Inline SVG: Quảng Bình province shape (prov-2) -->
-                                <svg viewBox="185 265 65 50" class="stop_province_svg" aria-label="Bản đồ Quảng Bình">
-                                    <path d="M212.358 272.042L213.851 277.712V277.713L213.854 277.721L215.254 280.82L215.259 280.828L219.559 287.029L219.587 287.069L219.628 287.041L220.186 286.669L222.558 290.227L222.563 290.235L227.363 295.334L227.375 295.346L227.391 295.349L230.583 295.947L234.869 298.54L239.965 303.436L239.973 303.444L239.982 303.446L243.162 304.639L244.353 307.419L244.358 307.428L246.658 310.828L246.669 310.843L246.687 310.848L247.175 310.987L244.526 311.444L243.943 310.376L243.933 310.355L243.908 310.351L239.309 309.551L239.283 309.546L239.265 309.564L236.465 312.264L236.452 312.277L236.45 312.294L236.357 313.036L233.812 312.352L233.799 312.348L233.784 312.353L231.297 313.148L225.281 311.668L226.741 309.529L226.767 309.49L226.731 309.462L222.432 305.862L222.414 305.847L222.391 305.851L220.824 306.144L219.928 304.65H217.98L217.966 304.663L216.776 305.752L214.394 306.05L214.33 306.059L214.354 306.118L214.834 307.368L212.501 308.147L210.318 307.254L210.281 307.238L210.258 307.273L208.872 309.35L206.009 309.449L203.144 308.461L202.449 304.79L202.44 304.746L202.396 304.75L201.122 304.847L199.746 303.078L198.849 299.089L198.837 299.037L198.786 299.052L195.386 300.052L195.361 300.059L195.353 300.083L194.872 301.428L190.655 299.172L191.148 296.61L191.159 296.555L191.104 296.55L187.635 296.252L187.047 294.583L187.04 294.564L187.021 294.555L184.445 293.365L183.949 289.893L183.942 289.847L183.896 289.85L182.622 289.947L180.352 287.184L180.948 282.611L181.742 280.129L183.009 279.057L184.282 279.547H184.283L186.283 280.247L186.309 280.256L186.33 280.24L188.703 278.458L192.676 280.644L192.689 280.652L192.706 280.65L196.105 280.249L196.115 280.247L199.378 279.159L201.158 281.927L201.179 281.96L201.216 281.947L204.693 280.754L205.674 281.343L205.697 281.357L205.722 281.345L208.222 280.145L208.25 280.131V278.514L209.932 276.141L211.918 275.347L211.967 275.327L211.945 275.279L210.856 272.805L211.521 271.856L212.358 272.042Z" fill="#006836" stroke="#004d26" stroke-width="0.5"/>
-                                </svg>
-                                <div class="stop_title_group">
-                                    <h2 class="stop_dish_title">Bánh Canh Bột Lọc</h2>
-                                    <p class="stop_dish_subtitle">Trong suốt như hồn biển Quảng Bình</p>
+                            <div class="stop_image_col stop_img_left">
+                                <div class="stop_img_wrap">
+                                    <img src="./assets/trung/banhcanh.jpg" alt="Bánh Canh Bột Lọc">
+                                    <div class="stop_province_badge">Quảng Bình</div>
                                 </div>
                             </div>
-                            <p class="stop_desc">
-                                Khác với bánh canh bột gạo thông thường, bánh canh bột lọc Quảng Bình có sợi bánh làm từ tinh bột sắn, sau khi luộc chín trở nên trong veo, dai giòn sần sật mang vẻ đẹp tinh khiết riêng. Nước dùng được nấu từ xương heo hầm nhừ, trong vắt nhưng ngọt đậm đà, thêm vào đó là tôm biển tươi đỏ thắm và chả heo nướng thơm. Điều làm nên cá tính của tô bánh canh Quảng Bình là hành lá và tiêu xanh xay thô rắc lên trên — tạo nên sự đối lập thú vị giữa vị ngọt dịu của nước dùng và vị cay nhẹ của tiêu. Người dân địa phương thường ăn kèm muối ớt chanh bên dĩa — thứ gia vị đặc trưng không thể thiếu của miền Trung nắng gió.
-                            </p>
-                        </div>
-                    </div>
 
-                    <!-- End cap of the timeline -->
+                            <div class="stop_text_col stop_text_right">
+                                <div class="stop_header">
+                                    <img src="./assets/trung/map-quangbinh.svg" alt="Bản đồ Quảng Bình"
+                                        class="stop_province_svg">
+                                    <div class="stop_title_group">
+                                        <h2 class="stop_dish_title">Bánh Canh Bột Lọc</h2>
+                                        <p class="stop_dish_subtitle">Trong suốt như hồn biển Quảng Bình</p>
+                                    </div>
+                                </div>
+                                <p class="stop_desc">
+                                    Khác với bánh canh bột gạo thông thường, bánh canh bột lọc Quảng Bình có sợi bánh
+                                    làm từ tinh bột sắn, sau khi luộc chín trở nên trong veo, dai giòn sần sật mang vẻ
+                                    đẹp tinh khiết riêng. Nước dùng được nấu từ xương heo hầm nhừ, trong vắt nhưng ngọt
+                                    đậm đà, thêm vào đó là tôm biển tươi đỏ thắm và chả heo nướng thơm. Điều làm nên cá
+                                    tính của tô bánh canh Quảng Bình là hành lá và tiêu xanh xay thô rắc lên trên — tạo
+                                    nên sự đối lập thú vị giữa vị ngọt dịu của nước dùng và vị cay nhẹ của tiêu. Người
+                                    dân địa phương thường ăn kèm muối ớt chanh bên dĩa — thứ gia vị đặc trưng không thể
+                                    thiếu của miền Trung nắng gió.
+                                </p>
+                            </div>
+                    </article>
+
+                    <!-- Điểm kết thúc dòng thời gian -->
                     <div class="timeline_end_cap">
                         <div class="end_cap_dot"></div>
                         <p class="end_cap_text">Hành trình còn tiếp tục...</p>
                     </div>
 
                 </div>
-                <!-- end .timeline_track -->
-
             </div>
         </section>
     </main>
 
     <!-- =================================================================
-         Solid Dark Footer - Chân trang tối màu dùng chung
+         3. CHÂN TRANG (FOOTER)
          ================================================================= -->
-    <div class="footer">
-        <div class="footer_content">
-            <h3 class="footer_logo">Ẩm thực Việt Nam</h3>
-            <p class="footer_desc">Hành trình tôn vinh và lan tỏa nét tinh hoa văn hóa ẩm thực ba miền Bắc - Trung - Nam.</p>
-            <div class="footer_links">
-                <a href="./index.html">Trang chủ</a>
-                <a href="./bac.html">Miền Bắc</a>
-                <a href="./trung.html">Miền Trung</a>
-                <a href="./nam.html">Miền Nam</a>
-                <a href="./about.html">Giới thiệu</a>
+        <footer class="footer">
+            <div class="footer_content">
+                <h3 class="footer_logo">Ẩm thực Việt Nam</h3>
+                <p class="footer_desc">Hành trình tôn vinh và lan tỏa nét tinh hoa văn hóa ẩm thực ba miền Bắc - Trung -
+                    Nam.</p>
+                <div class="footer_links">
+                    <a href="./index.html">Trang chủ</a>
+                    <a href="./bac.html">Miền Bắc</a>
+                    <a href="./trung.html">Miền Trung</a>
+                    <a href="./nam.html">Miền Nam</a>
+                    <a href="./about.html">Giới thiệu</a>
+                </div>
+                <div class="footer_divider"></div>
+                <p class="footer_copy">Sản phẩm của Phúc Thanh, Ngọc Khánh, Yến Nhi</p>
             </div>
-            <div class="footer_divider"></div>
-            <p class="footer_copy">Sản phẩm của Phúc Thanh, Ngọc Khánh, Yến Nhi</p>
-        </div>
-    </div>
+    </footer>
 </body>
 
 </html>

@@ -5,67 +5,245 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ẩm thực Miền Nam - Tinh hoa ẩm thực Việt Nam</title>
-    <!-- Common styles for typography, navbar, and footer -->
+    <!-- CSS dùng chung (navbar, footer, reset) và CSS riêng cho trang miền Nam -->
     <link rel="stylesheet" href="./css/common.css">
-    <!-- Regional page styles for hero section and map display -->
     <link rel="stylesheet" href="./css/region.css">
+    <link rel="stylesheet" href="./css/nam.css">
 </head>
 
 <body>
     <!-- =================================================================
-         Navigation Bar - Header navigation bar
+         1. THANH ĐIỀU HƯỚNG (HEADER & NAVBAR)
          ================================================================= -->
-    <div class="navbar">
-        <!-- Brand logo link returning to homepage -->
+    <header class="navbar">
         <a href="./index.html" class="logo_link">
-            <p class="logo">Ẩm thực Việt Nam</p>
+            <span class="logo">Ẩm thực Việt Nam</span>
         </a>
-        <!-- Navigation menu with Southern Vietnam page active -->
-        <div class="nav_link">
+
+        <nav class="nav_link">
             <a href="./index.html">Trang chủ</a>
             <a href="./bac.html">Miền Bắc</a>
             <a href="./trung.html">Miền Trung</a>
             <a href="./nam.html" class="nav_active">Miền Nam</a>
             <a href="./about.html">Giới thiệu</a>
-        </div>
-    </div>
+        </nav>
+    </header>
 
     <!-- =================================================================
-         Main Content Area - Southern Vietnam regional presentation
+         2. NỘI DUNG CHÍNH (MAIN CONTENT)
          ================================================================= -->
     <main>
-        <!-- Hero Section: Southern Vietnam introduction with regional map -->
-        <div class="hero_section">
+        <!-- Phần mở đầu: Giới thiệu miền Nam và bản đồ tương tác -->
+        <section class="hero_section">
             <div class="hero_content">
-                <!-- Left Column: Title, slogan, description and CTA button -->
+                <!-- Cột trái: Tiêu đề và mô tả ẩm thực phương Nam -->
                 <div class="hero_left">
                     <p class="sub_vn">Ẩm thực</p>
                     <p class="vn">Miền Nam</p>
                     <p class="hvds">Vị ngọt lành, hào sảng đất phương Nam</p>
                     <p class="desc">
-                        Vào tới miền Nam thì đặc trưng ẩm thực lại mang nét dân dã, mộc mạc mà vô cùng phong phú. Người miền Nam thích các món ăn có vị ngọt, do đó thường nêm đường hoặc dùng nước dừa để nấu ăn. Với những nguyên liệu gần gũi, dễ kiếm cùng cách chế biến đơn giản nhưng các món ăn nơi đây lại khiến bạn phải nhớ mãi chỉ sau lần đầu nếm thử.
+                        Vào tới miền Nam thì đặc trưng ẩm thực lại mang nét dân dã, mộc mạc mà vô cùng
+                        phong phú. Người miền Nam thích các món ăn có vị ngọt, do đó thường nêm đường
+                        hoặc dùng nước dừa để nấu ăn. Với những nguyên liệu gần gũi, dễ kiếm cùng
+                        cách chế biến đơn giản nhưng các món ăn nơi đây lại khiến bạn phải nhớ mãi chỉ
+                        sau lần đầu nếm thử.
                     </p>
-                    <!-- Jump button to the upcoming specialties section -->
                     <a class="explore_now" href="#specialties">Khám phá ngay!</a>
                 </div>
 
-                <!-- Right Column: Regional SVG map of Southern Vietnam -->
+                <!-- Cột phải: Bản đồ SVG miền Nam 3D -->
                 <div class="hero_right">
-                    <object type="image/svg+xml" data="./assets/map-south.svg" class="hero_map" style="aspect-ratio: 325 / 235;" aria-label="Bản đồ Ẩm thực Miền Nam">
-                        <img src="./assets/map-south.svg" alt="Bản đồ Ẩm thực Miền Nam" class="hero_map">
+                    <object type="image/svg+xml" data="./assets/map-south.svg" class="hero_map"
+                        style="aspect-ratio: 325 / 235;" aria-label="Bản đồ Ẩm thực Miền Nam">
                     </object>
                 </div>
             </div>
 
-            <!-- Bottom white gradient to transition smoothly into the next content section -->
+            <!-- Dải màu trắng chuyển mờ để nối mượt xuống phần nội dung dưới -->
             <div class="white_gradient" id="specialties"></div>
-        </div>
+        </section>
+
+        <!-- =============================================================
+             TẠP CHÍ ẨM THỰC PHƯƠNG NAM (EDITORIAL MAGAZINE LAYOUT)
+             ============================================================= -->
+        <section class="south_wrapper">
+            <div class="south_container">
+
+                <!-- -----------------------------------------------------
+                     PHẦN 1: MÓN TÂM ĐIỂM (COVER SPOTLIGHT) - CƠM TẤM SÀI GÒN
+                     ----------------------------------------------------- -->
+                <section class="spotlight_section">
+                    <article class="spotlight_card">
+                        <!-- Cột hình ảnh lớn món ăn -->
+                        <div class="spotlight_img_col">
+                            <img src="./assets/nam/com-tam.jpg" alt="Cơm Tấm Sài Gòn" class="spotlight_img">
+                        </div>
+
+                        <!-- Cột bài viết cảm nhận -->
+                        <div class="spotlight_text_col">
+                            <span class="spotlight_tag">Biểu tượng phố thị phương Nam</span>
+                            <h2 class="spotlight_title">Cơm Tấm Sài Gòn</h2>
+                            <blockquote class="spotlight_quote">
+                                "Từ hạt gạo tấm vỡ mộc mạc của người lao động nghèo, cơm tấm đã vươn mình trở thành linh
+                                hồn ẩm thực phóng khoáng của đất Sài thành."
+                            </blockquote>
+                            <p class="spotlight_desc">
+                                Không chỉ là món ăn sáng quen thuộc, cơm tấm Sài Gòn hiện diện từ những con hẻm bình dân
+                                nghi ngút khói than hồng cho đến các hàng quán nhộn nhịp thâu đêm. Điểm nhấn làm say
+                                lòng người chính là miếng sườn cốt lết dày dặn ướp đẫm mật ong, sả băm rồi nướng cháy
+                                xém cạnh trên than củi rực đỏ. Đĩa cơm bốc khói dẻo thơm hạt tấm vỡ, điểm xuyết sợi bì
+                                thính giòn bùi, miếng chả trứng chưng vàng ruộm béo ngậy và chút mỡ hành xanh mướt óng
+                                ả. Khi rưới đều muỗng nước mắm kẹo chua ngọt pha cùng ớt băm và đồ chua củ cải giòn tan,
+                                tất cả hòa quyện thành hương vị đậm đà khó lẫn.
+                            </p>
+                        </div>
+                    </article>
+                </section>
+
+                <!-- -----------------------------------------------------
+                     PHẦN 2: BỘ TỨ PHONG VỊ MIỆT VƯỜN (GRID 2x2 CÂN XỨNG)
+                     ----------------------------------------------------- -->
+                <section class="dishes_section">
+                    <!-- Tiêu đề phần bộ tứ món ăn -->
+                    <div class="magazine_header">
+                        <h2 class="magazine_main_title">Bốn Nét Phong Vị Sông Nước</h2>
+                        <p class="magazine_main_subtitle">Sự hòa quyện giữa sản vật thiên nhiên trù phú và nét hào sảng
+                            chân chất miền Cửu Long</p>
+                        <div class="magazine_line"></div>
+                    </div>
+
+                    <!-- Lưới 2 cột chứa 4 món ăn đặc sắc -->
+                    <div class="dishes_grid">
+
+                        <!-- Món 1: Cá Lóc Nướng Trui -->
+                        <article class="dish_article">
+                            <div class="dish_img_box">
+                                <img src="./assets/nam/ca-loc-nuong-trui.jpg" alt="Cá Lóc Nướng Trui" class="dish_img">
+                            </div>
+                            <span class="dish_tag">Khẩn hoang sông nước</span>
+                            <h3 class="dish_title">Cá Lóc Nướng Trui</h3>
+                            <p class="dish_subtitle">Hương rơm rạ thuở mở đất</p>
+                            <p class="dish_desc">
+                                Mang đậm chất phong trần của người khai hoang phương Nam, cá lóc đồng vừa bắt dưới mương
+                                chỉ cần xiên que tre từ miệng đến đuôi rồi cắm thẳng xuống đất, phủ đầy rơm khô và đốt
+                                lửa ngùn ngụt. Khi tro tàn, cạo sạch lớp vảy cháy đen bên ngoài sẽ để lộ thớ thịt cá
+                                trắng phau, thơm nức mùi khói đồng rạ. Cuốn thịt cá ngọt chắc cùng bánh tráng mỏng, đọt
+                                cóc, chuối chát, khế chua rồi chấm ngập vào chén mắm me sánh sệt chua cay, bạn sẽ cảm
+                                nhận trọn vẹn sự hoang sơ, nguyên bản của đất trời Nam Bộ.
+                            </p>
+                        </article>
+
+                        <!-- Món 2: Bánh Xèo Miền Tây -->
+                        <article class="dish_article">
+                            <div class="dish_img_box">
+                                <img src="./assets/nam/banh-xeo.jpg" alt="Bánh Xèo Miền Tây" class="dish_img">
+                            </div>
+                            <span class="dish_tag">Đồng bằng trù phú</span>
+                            <h3 class="dish_title">Bánh Xèo Miền Tây</h3>
+                            <p class="dish_subtitle">Giòn rụm bên rổ rau rừng miệt vườn</p>
+                            <p class="dish_desc">
+                                Khác với bánh xèo nhỏ miền Trung, bánh xèo miền Tây to bản như chiếc nón lá, đổ trong
+                                chảo gang lớn với tiếng "xèo" vui tai. Bột gạo pha cốt dừa béo ngậy, dậy sắc vàng của
+                                nghệ tươi hòa cùng nhân tôm sông tươi rói, thịt ba rọi xắt mỏng, củ hũ dừa và giá đỗ
+                                ngọt giòn. Ăn bánh xèo phải dùng tay cuộn tròn miếng bánh giòn rụm cùng rổ rau rừng
+                                phong phú hơn hai mươi loại: đọt xoài, lá cách, cải bẹ xanh, xà lách non... chấm ngập
+                                nước mắm tỏi ớt chua ngọt tạo nên bản hòa tấu giòn tan, mát lành.
+                            </p>
+                        </article>
+
+                        <!-- Món 3: Hủ Tiếu Nam Vang -->
+                        <article class="dish_article">
+                            <div class="dish_img_box">
+                                <img src="./assets/nam/hu-tieu-nam-vang.jpg" alt="Hủ Tiếu Nam Vang" class="dish_img">
+                            </div>
+                            <span class="dish_tag">Giao thoa văn hóa</span>
+                            <h3 class="dish_title">Hủ Tiếu Nam Vang</h3>
+                            <p class="dish_subtitle">Bản hòa ca phong vị Nam Bộ</p>
+                            <p class="dish_desc">
+                                Du nhập từ Campuchia nhưng khi đến miền Nam, hủ tiếu đã được biến tấu tài tình để trở
+                                thành món ăn quen thuộc bậc nhất. Điểm đắt giá của tô hủ tiếu là nồi nước lèo trong veo
+                                hầm từ xương ống heo, mực khô và tôm khô nướng thơm, ngọt thanh mà không ngấy mỡ. Bát hủ
+                                tiếu đầy đặn với sợi hủ tiếu dai giòn đặc trưng, phủ ngập thịt băm, tôm luộc bóc vỏ, gan
+                                heo thái mỏng, trứng cút cùng hành phi và tỏi phi thơm lừng. Dù ăn nước hay ăn khô trộn
+                                sốt chua ngọt, món ăn đều kích thích trọn vẹn vị giác.
+                            </p>
+                        </article>
+
+                        <!-- Món 4: Lẩu Mắm Miền Tây -->
+                        <article class="dish_article">
+                            <div class="dish_img_box">
+                                <img src="./assets/nam/lau-mam.jpg" alt="Lẩu Mắm Miền Tây" class="dish_img">
+                            </div>
+                            <span class="dish_tag">Mùa nước nổi</span>
+                            <h3 class="dish_title">Lẩu Mắm Miền Tây</h3>
+                            <p class="dish_subtitle">Hương vị nồng nàn đất phù sa</p>
+                            <p class="dish_desc">
+                                Được ví như bản giao hưởng đỉnh cao của ẩm thực sông nước Cửu Long, lẩu mắm nấu từ cốt
+                                mắm cá sặc và cá linh rây mịn, thơm nức mũi mùi sả băm ớt hiểm và nước dừa xiêm thanh
+                                ngọt. Nồi lẩu sôi sùng sục đầy ắp cá lóc đồng, tôm càng xanh, thịt ba chỉ, cà tím giòn
+                                rụm. Điều làm nên linh hồn của món ăn là mâm rau nhúng bạt ngàn sản vật phù sa: cọng
+                                bông súng tím ngắt, bông điên điển vàng rực, rau đắng, kèo nèo, so đũa... vị mặn mà của
+                                mắm quyện lấy vị đắng ngọt của rau cỏ tạo nên dư vị khó quên.
+                            </p>
+                        </article>
+
+                    </div>
+                </section>
+
+                <!-- -----------------------------------------------------
+                     PHẦN 3: SỔ TAY ẨM THỰC (CULINARY NOTES - 3 KHỐI TĨNH)
+                     ----------------------------------------------------- -->
+                <section class="notes_section">
+                    <div class="magazine_header">
+                        <h2 class="magazine_main_title">Ghi Chép Hương Vị Phương Nam</h2>
+                        <p class="magazine_main_subtitle">Ba nét tinh túy làm nên dấu ấn ẩm thực bình dị mà quyến rũ</p>
+                        <div class="magazine_line"></div>
+                    </div>
+
+                    <div class="notes_grid">
+                        <!-- Ghi chép 1: Vị ngọt tự nhiên -->
+                        <article class="note_card">
+                            <div class="note_index">01</div>
+                            <h3 class="note_title">Vị Ngọt Cốt Dừa &amp; Thốt Nốt</h3>
+                            <p class="note_desc">
+                                Người miền Nam chuộng vị ngọt thanh, nhưng không phải từ đường hóa học mà từ nước dừa
+                                xiêm, cốt dừa béo thơm và đường thốt nốt xứ Bảy Núi. Vị ngọt ấy thấm đượm vào từng nồi
+                                kho, từng bát canh chua tạo nên hậu vị êm dịu, ấm lòng.
+                            </p>
+                        </article>
+
+                        <!-- Ghi chép 2: Rau đồng cỏ dại -->
+                        <article class="note_card">
+                            <div class="note_index">02</div>
+                            <h3 class="note_title">Rau Đồng &amp; Bông Hoa Miệt Vườn</h3>
+                            <p class="note_desc">
+                                Mâm cơm Nam Bộ luôn ngập tràn màu xanh của thiên nhiên hoang dã. Từ bông điên điển, bông
+                                súng mùa nước lũ cho tới lá cóc, đọt xoài miệt vườn — mỗi loại rau đều mang đến vị chát,
+                                chua, giòn thanh để cân bằng trọn vẹn món ăn.
+                            </p>
+                        </article>
+
+                        <!-- Ghi chép 3: Mắm đồng phù sa -->
+                        <article class="note_card">
+                            <div class="note_index">03</div>
+                            <h3 class="note_title">Hồn Mắm Đậm Đà Sông Nước</h3>
+                            <p class="note_desc">
+                                Mắm cá linh, cá sặc, mắm ba khía là kết tinh từ những mùa lũ phù sa bồi đắp. Mắm không
+                                chỉ để ăn sống hay kho quẹt mà còn là thứ gia vị linh hồn thắp sáng hương vị cho các món
+                                canh, lẩu độc nhất vô nhị.
+                            </p>
+                        </article>
+                    </div>
+                </section>
+
+            </div>
+        </section>
     </main>
 
     <!-- =================================================================
-         Solid Dark Footer - Chân trang tối màu dùng chung
+         3. CHÂN TRANG (FOOTER)
          ================================================================= -->
-    <div class="footer">
+    <footer class="footer">
         <div class="footer_content">
             <h3 class="footer_logo">Ẩm thực Việt Nam</h3>
             <p class="footer_desc">Hành trình tôn vinh và lan tỏa nét tinh hoa văn hóa ẩm thực ba miền Bắc - Trung -
@@ -80,7 +258,7 @@
             <div class="footer_divider"></div>
             <p class="footer_copy">Sản phẩm của Phúc Thanh, Ngọc Khánh, Yến Nhi</p>
         </div>
-    </div>
+    </footer>
 </body>
 
 </html>

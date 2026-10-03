@@ -15,20 +15,21 @@
     </mask>
     <style>
       :root {
-        /* Province color palette */
-        --prov-fill: #efffefff;
-        --prov-stroke: #2b6e44;
+        /* Bảng màu tỉnh thành: Sáng trong, tươi tắn, không bị tối màu */
+        --prov-fill: #f7fcf9;
+        --prov-stroke: #007a3d;
         --prov-stroke-width: 0.5px;
 
-        /* Hover highlight styling (light orange fill with dark orange stroke) */
-        --prov-hover-fill: #ffd8be;
-        --prov-hover-stroke: #e3502d;
-        --prov-hover-stroke-width: 1.2px;
+        /* Màu khi di chuột (Hover): Màu cam tươi ấm áp, ánh vàng hổ phách, không bị ngả đỏ */
+        --prov-hover-fill: #fff0db;
+        --prov-hover-stroke: #f58220;
+        --prov-hover-stroke-width: 1px;
       }
       .region-provinces path {
         fill: var(--prov-fill);
         stroke: var(--prov-stroke);
         stroke-width: var(--prov-stroke-width);
+        shape-rendering: geometricPrecision;
         transition: fill 0.25s ease, stroke 0.25s ease, stroke-width 0.25s ease;
         animation: provinceAppear 0.9s cubic-bezier(0.16, 1, 0.3, 1) backwards;
       }

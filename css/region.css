@@ -20,7 +20,7 @@
     max-width: 1200px;
     margin-inline: auto;
     padding-inline: 40px;
-    padding-top: 120px;
+    padding-top: 200px;
     box-sizing: border-box;
     gap: 60px;
 }
@@ -122,14 +122,32 @@
     min-height: 520px;
 }
 
-/* Bản đồ SVG vùng miền với góc nhìn 3D từ dưới lên */
+/* Bản đồ SVG vùng miền với góc nhìn 3D từ dưới lên (trực tiếp - dùng cho trung/nam) */
 .hero_map {
     width: 100%;
     max-width: 580px;
     height: auto;
+    display: block;
     transform: rotateX(24deg) rotateY(-14deg) rotateZ(4deg);
     transform-style: preserve-3d;
     transition: transform 0.4s ease;
+}
+
+/* Wrapper bao quanh bản đồ + food pins (dùng cho bac) - wrapper mang transform 3D thay map */
+.map_wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 580px;
+    transform: rotateX(24deg) rotateY(-14deg) rotateZ(4deg);
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease;
+}
+
+/* Khi đã có wrapper thì map con không cần transform nữa */
+.map_wrapper .hero_map {
+    transform: none;
+    max-width: 100%;
+    transform-style: flat;
 }
 
 /* Bản đồ Miền Trung dài dọc nên cần giới hạn kích thước để cân đối khung hình */
@@ -139,39 +157,6 @@
     width: auto;
 }
 
-/* Tương thích giao diện trên màn hình nhỏ */
-@media screen and (max-width: 900px) {
-    .hero_content {
-        flex-direction: column;
-        padding-top: 100px;
-        gap: 40px;
-        padding-inline: 20px;
-    }
-
-    .hero_left {
-        align-items: center;
-        text-align: center;
-    }
-
-    .desc {
-        padding-right: 0;
-    }
-
-    .hvds::after {
-        left: -40px;
-        width: calc(100% + 80px);
-        border-radius: 50px;
-    }
-
-    .hero_map {
-        max-width: 460px;
-    }
-
-    .hero_map_central {
-        max-width: 290px;
-        max-height: 440px;
-    }
-}
 
 /* ==========================================================================
    Regional Specialties Section Styles
