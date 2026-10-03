@@ -94,7 +94,7 @@
     grid-template-columns: 1fr 56px 1fr;
     grid-template-areas: "image node text";
     column-gap: 40px;
-    align-items: center;
+    align-items: center ;
     padding: 50px 0;
     position: relative;
 }
@@ -135,7 +135,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 0 5px rgba(0, 104, 54, 0.12), 0 4px 16px rgba(0, 104, 54, 0.3);
     flex-shrink: 0;
     letter-spacing: 0.5px;
 }
@@ -166,10 +165,6 @@
     transition: transform 0.5s ease;
 }
 
-/* Subtle zoom on hover */
-.timeline_stop:hover .stop_img_wrap img {
-    transform: scale(1.03);
-}
 
 /* Province name tag floating on the bottom-left of the image */
 .stop_province_badge {
@@ -281,84 +276,4 @@
     font-size: 1rem;
     color: #a8a29e;
     margin: 0;
-}
-
-/* --------------------------------------------------------------------------
-   Responsive — Tablet (≤ 900px)
-   -------------------------------------------------------------------------- */
-@media screen and (max-width: 900px) {
-    .timeline_stop {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
-        padding: 40px 0;
-        column-gap: 0;
-        row-gap: 24px;
-    }
-
-    /* Stack: node on top, then image, then text */
-    .timeline_node {
-        grid-column: 1;
-        grid-row: 1;
-        justify-content: flex-start;
-    }
-
-    .stop_image_col {
-        grid-column: 1;
-        grid-row: 2;
-    }
-
-    .stop_text_col {
-        grid-column: 1;
-        grid-row: 3;
-    }
-
-    /* Reverse stops: same stacking order on mobile */
-    .timeline_stop.reverse {
-        direction: ltr;
-    }
-
-    .timeline_track::before {
-        left: 26px;
-    }
-
-    .stop_dish_title {
-        font-size: 1.7rem;
-    }
-
-    .timeline_main_title {
-        font-size: 1.85rem;
-    }
-}
-
-/* --------------------------------------------------------------------------
-   Responsive — Mobile (≤ 640px)
-   -------------------------------------------------------------------------- */
-@media screen and (max-width: 640px) {
-    .timeline_container {
-        padding: 0 16px;
-    }
-
-    .stop_header {
-        gap: 12px;
-    }
-
-    .stop_province_svg {
-        height: 50px;
-    }
-
-    .stop_dish_title {
-        font-size: 1.45rem;
-    }
-
-    .stop_dish_subtitle {
-        font-size: 0.95rem;
-    }
-
-    .timeline_main_title {
-        font-size: 1.55rem;
-    }
-
-    .timeline_main_subtitle {
-        font-size: 0.95rem;
-    }
 }

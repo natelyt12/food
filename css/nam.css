@@ -1,0 +1,297 @@
+/* ==========================================================================
+   nam.css — Kiểu dáng cho trang Ẩm thực Miền Nam (nam.html)
+   Phong cách: Tạp chí ẩm thực (Editorial Magazine) — Tĩnh tại, tao nhã.
+   Chỉ sử dụng 2 font chữ: Lora (tiêu đề/trích dẫn) và Open Sans (thân bài/chú thích).
+   Code rõ ràng, chú thích chi tiết, phù hợp cho người mới làm quen.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. KHUNG BAO NGOÀI TOÀN BỘ NỘI DUNG (SECTION & CONTAINER)
+   -------------------------------------------------------------------------- */
+
+/* Khung nền trắng toàn màn hình chứa toàn bộ nội dung của trang miền Nam */
+.south_wrapper {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 30px 0 100px;
+    box-sizing: border-box;
+}
+
+/* Khung giới hạn độ rộng ở giữa màn hình (tối đa 1200px) */
+.south_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------------
+   2. TIÊU ĐỀ PHÂN ĐOẠN DÙNG CHUNG (SECTION HEADINGS)
+   -------------------------------------------------------------------------- */
+
+.magazine_header {
+    text-align: center;
+    margin-bottom: 50px;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Tiêu đề chính dạng chữ Lora in nghiêng tao nhã màu xanh lá đậm */
+.magazine_main_title {
+    font-family: "Lora", 'Times New Roman', serif;
+    font-size: 2.3rem;
+    font-weight: 600;
+    font-style: italic;
+    color: #006836;
+    margin: 0 0 12px 0;
+}
+
+/* Dòng phụ đề tóm lược phong vị phương Nam */
+.magazine_main_subtitle {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.05rem;
+    color: #542813;
+    line-height: 1.6;
+    margin: 0 0 22px 0;
+}
+
+/* Đường kẻ chỉ mảnh ngăn cách tinh tế màu nâu */
+.magazine_line {
+    width: 70px;
+    height: 1.5px;
+    background-color: #542813;
+    margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   3. PHẦN SPOTLIGHT: MÓN TÂM ĐIỂM (COVER FEATURE - CƠM TẤM SÀI GÒN)
+   Bố cục ngang phẳng 2 cột: Ảnh lớn bên trái, khối đọc bài viết bên phải
+   -------------------------------------------------------------------------- */
+
+.spotlight_section {
+    margin-bottom: 85px;
+}
+
+/* Thẻ bao bọc món tâm điểm với màu nền giấy ngà ấm cúng */
+.spotlight_card {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    background-color: #fffdf9;
+    border: 1px solid #eee8df;
+    border-radius: 12px;
+    padding: 35px;
+    box-sizing: border-box;
+}
+
+/* Cột hình ảnh bên trái */
+.spotlight_img_col {
+    flex: 1.15;
+    height: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f3efe6;
+}
+
+/* Ảnh hiển thị tĩnh, vừa vặn khung hình */
+.spotlight_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Cột văn bản nội dung bên phải */
+.spotlight_text_col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Nhãn danh mục nhỏ viết hoa */
+.spotlight_tag {
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #006836;
+    margin-bottom: 10px;
+}
+
+/* Tiêu đề món tâm điểm (chữ lớn màu đỏ cam) */
+.spotlight_title {
+    font-family: "Lora", 'Times New Roman', serif;
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: #E3502D;
+    margin: 0 0 16px 0;
+    line-height: 1.2;
+}
+
+/* Trích dẫn cảm xúc theo phong cách tạp chí có đường kẻ xanh bên trái */
+.spotlight_quote {
+    font-family: "Lora", 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #542813;
+    margin: 0 0 20px 0;
+    padding-left: 16px;
+    border-left: 3px solid #006836;
+}
+
+/* Đoạn văn mô tả chi tiết món ăn */
+.spotlight_desc {
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.98rem;
+    line-height: 1.75;
+    color: #542813;
+    text-align: justify;
+    margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   4. BỘ TỨ PHONG VỊ: LƯỚI 2 CỘT CÂN XỨNG (GRID 2x2)
+   Trưng bày 4 món ăn tiêu biểu của Nam Bộ
+   -------------------------------------------------------------------------- */
+
+.dishes_section {
+    margin-bottom: 90px;
+}
+
+/* Lưới chia làm 2 cột đều nhau */
+.dishes_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 40px;
+}
+
+/* Từng khối bài viết món ăn */
+.dish_article {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eee8df;
+    padding-bottom: 30px;
+}
+
+/* Khung ảnh của từng món */
+.dish_img_box {
+    width: 100%;
+    height: 270px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background-color: #f7f4ed;
+}
+
+.dish_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Nhãn địa danh hoặc chủ đề nhỏ */
+.dish_tag {
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #E3502D;
+    margin-bottom: 8px;
+}
+
+/* Tiêu đề món ăn - Khi hover đổi màu êm ái sang xanh lá */
+.dish_title {
+    font-family: "Lora", 'Times New Roman', serif;
+    font-size: 1.65rem;
+    font-weight: 600;
+    color: #542813;
+    margin: 0 0 6px 0;
+    transition: color 0.25s ease;
+}
+
+.dish_article:hover .dish_title {
+    color: #006836;
+}
+
+/* Phụ đề phong vị món ăn */
+.dish_subtitle {
+    font-family: "Lora", 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: #006836;
+    margin: 0 0 14px 0;
+}
+
+/* Đoạn mô tả chi tiết của món ăn */
+.dish_desc {
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #542813;
+    text-align: justify;
+    margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   5. SỔ TAY GHI CHÉP ẨM THỰC: 3 KHỐI TĨNH (CULINARY NOTES)
+   Tóm lược 3 nét văn hóa ẩm thực Nam Bộ
+   -------------------------------------------------------------------------- */
+
+.notes_section {
+    background-color: #faf7f2;
+    border: 1px solid #ece5da;
+    border-radius: 12px;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+/* Lưới 3 cột đều nhau */
+.notes_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Từng thẻ ghi chép màu trắng sạch sẽ */
+.note_card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #eee8df;
+    border-top: 3px solid #006836;
+    padding: 28px 22px;
+    box-sizing: border-box;
+}
+
+/* Số thứ tự la mã hoặc số đếm thanh nhã */
+.note_index {
+    font-family: "Lora", 'Times New Roman', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #E3502D;
+    margin-bottom: 10px;
+}
+
+/* Tựa đề của ghi chép văn hóa */
+.note_title {
+    font-family: "Lora", 'Times New Roman', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #542813;
+    margin: 0 0 12px 0;
+}
+
+/* Nội dung giải thích */
+.note_desc {
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: #542813;
+    margin: 0;
+}
