@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký theo dõi - Ẩm thực Việt Nam</title>
+    <!-- Nhúng CSS dùng chung (navbar, footer) và CSS riêng của trang đăng ký -->
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/subscribe.css">
+</head>
+
+<body>
+    <!-- =================================================================
+         1. THANH ĐIỀU HƯỚNG (HEADER & NAVBAR)
+         ================================================================= -->
+    <header class="navbar">
+        <a href="./index.html" class="logo_link">
+            <span class="logo">Ẩm thực Việt Nam</span>
+        </a>
+
+        <!-- Danh sách menu điều hướng giữa các trang -->
+        <nav class="nav_link">
+            <a href="./index.html">Trang chủ</a>
+            <a href="./bac.html">Miền Bắc</a>
+            <a href="./trung.html">Miền Trung</a>
+            <a href="./nam.html">Miền Nam</a>
+            <a href="./about.html">Giới thiệu</a>
+            <a href="./subscribe.html" class="nav_active">Đăng ký theo dõi</a>
+        </nav>
+    </header>
+
+    <!-- =================================================================
+         2. NỘI DUNG CHÍNH (MAIN CONTENT) - FORM ĐĂNG KÝ THEO DÕI
+         ================================================================= -->
+    <main class="subscribe_wrapper">
+        <div class="subscribe_card">
+            <h1 class="subscribe_title">Đăng Ký Theo Dõi</h1>
+            <p class="subscribe_desc">
+                Nhận thông báo về các món ăn mới, cẩm nang du lịch ẩm thực và nét văn hóa đặc sắc ba miền hàng tuần.
+            </p>
+
+            <!-- Form nhận thông tin người theo dõi -->
+            <form id="subscribeForm">
+                <!-- 1. Trường Họ và tên -->
+                <div class="form_group">
+                    <label for="fullname">Họ và tên <span class="required_star">*</span></label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Ví dụ: Nguyễn Văn An">
+                </div>
+
+                <!-- 2. Trường Địa chỉ Email -->
+                <div class="form_group">
+                    <label for="email">Địa chỉ Email <span class="required_star">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="Ví dụ: vanan@gmail.com">
+                </div>
+
+                <!-- 3. Trường Số điện thoại -->
+                <div class="form_group">
+                    <label for="phone">Số điện thoại <span class="required_star">*</span></label>
+                    <input type="tel" id="phone" name="phone" placeholder="Ví dụ: 0912345678">
+                </div>
+
+                <!-- Nút gửi thông tin đăng ký -->
+                <button type="submit" class="submit_btn">Đăng Ký Ngay</button>
+
+                <!-- Dòng cam kết quyền riêng tư -->
+                <p class="form_note">Chúng tôi cam kết bảo mật thông tin và không gửi thư rác.</p>
+            </form>
+        </div>
+    </main>
+
+    <!-- =================================================================
+         3. CHÂN TRANG (FOOTER)
+         ================================================================= -->
+    <footer class="footer">
+        <div class="footer_content">
+            <h3 class="footer_logo">Ẩm thực Việt Nam</h3>
+            <p class="footer_desc">Hành trình tôn vinh và lan tỏa nét tinh hoa văn hóa ẩm thực ba miền Bắc - Trung - Nam.</p>
+            <div class="footer_links">
+                <a href="./index.html">Trang chủ</a>
+                <a href="./bac.html">Miền Bắc</a>
+                <a href="./trung.html">Miền Trung</a>
+                <a href="./nam.html">Miền Nam</a>
+                <a href="./about.html">Giới thiệu</a>
+                <a href="./subscribe.html">Đăng ký theo dõi</a>
+            </div>
+            <div class="footer_divider"></div>
+            <p class="footer_copy">Sản phẩm của Phúc Thanh, Ngọc Khánh, Yến Nhi</p>
+        </div>
+    </footer>
+
+    <!-- File JavaScript xử lý logic nhận thông tin và kiểm tra dữ liệu -->
+    <script src="./js/subscribe.js"></script>
+</body>
+
+</html>

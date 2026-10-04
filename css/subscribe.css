@@ -1,0 +1,144 @@
+/* ==========================================================================
+   Subscribe Page Styles - Giao diện trang Đăng Ký Theo Dõi
+   Được thiết kế tối giản, đồng bộ với phong cách website Ẩm thực 3 Miền
+   ========================================================================== */
+
+/* Phần bao bọc toàn bộ nội dung của trang đăng ký */
+.subscribe_wrapper {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px 60px 20px;
+    background-image: url("../assets/image.jpg");
+}
+
+/* Khối thẻ màu trắng chứa form ở giữa màn hình */
+.subscribe_card {
+    background-color: #ffffff;
+    max-width: 520px;
+    width: 100%;
+    border-radius: 16px;
+    padding: 40px 35px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+}
+
+/* Tiêu đề chính của form */
+.subscribe_title {
+    font-family: "Lora", 'Times New Roman', serif;
+    font-size: 1.9rem;
+    color: #542813;
+    text-align: center;
+    margin: 0 0 10px 0;
+    font-weight: 700;
+}
+
+/* Đoạn mô tả dưới tiêu đề */
+.subscribe_desc {
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.95rem;
+    color: #666;
+    text-align: center;
+    line-height: 1.6;
+    margin: 0 0 25px 0;
+}
+
+/* Nhóm từng ô nhập liệu (label + input + thông báo lỗi) */
+.form_group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Nhãn chữ (Label) phía trên ô nhập liệu */
+.form_group label {
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 6px;
+}
+
+/* Dấu sao đỏ biểu thị trường bắt buộc */
+.required_star {
+    color: #e53935;
+}
+
+/* Ô nhập liệu input */
+.form_group input {
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.95rem;
+    padding: 12px 14px;
+    border: 1.5px solid #dcdcdc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background-color: #fafafa;
+}
+
+/* Khi người dùng bấm vào ô nhập liệu (focus) */
+.form_group input:focus {
+    border-color: #006836;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(0, 104, 54, 0.15);
+}
+
+/* Dòng chữ thông báo lỗi màu đỏ dưới mỗi ô */
+.error_text {
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.82rem;
+    color: #e53935;
+    margin-top: 5px;
+    min-height: 16px;
+}
+
+/* Nút bấm Đăng ký ngay */
+.submit_btn {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    width: 100%;
+    padding: 14px;
+    background-color: #006836;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    margin-top: 10px;
+}
+
+/* Hiệu ứng khi rê chuột và bấm nút */
+.submit_btn:hover {
+    background-color: #00502a;
+}
+
+.submit_btn:active {
+    transform: scale(0.99);
+}
+
+/* Hộp thông báo đăng ký thành công */
+.success_box {
+    display: none; /* Mặc định ẩn, khi đăng ký thành công JS sẽ cho hiển thị */
+    background-color: #e8f5e9;
+    border: 1px solid #81c784;
+    color: #1b5e20;
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Ghi chú bảo mật nhỏ ở chân form */
+.form_note {
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.8rem;
+    color: #888888;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
