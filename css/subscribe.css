@@ -1,8 +1,3 @@
-/* ==========================================================================
-   Subscribe Page Styles - Giao diện trang Đăng Ký Theo Dõi
-   Được thiết kế tối giản, đồng bộ với phong cách website Ẩm thực 3 Miền
-   ========================================================================== */
-
 /* Phần bao bọc toàn bộ nội dung của trang đăng ký */
 .subscribe_wrapper {
     min-height: calc(100vh - 120px);

@@ -1,11 +1,4 @@
-/* ==========================================================================
-   About Page Styles - Kiểu dáng dành riêng cho trang Giới thiệu (about.html)
-   Bao gồm: Phần biểu ngữ mở đầu (Hero banner) và Khung hiển thị các thẻ thành viên.
-   ========================================================================== */
-
-/* ==========================================================================
-   About Page Hero Banner - Biểu ngữ mở đầu trang Giới thiệu
-   ========================================================================== */
+/* About Page Hero Banner */
 
 /* Khung nền tối phủ ảnh nhà hàng và tạo khoảng đệm đầu trang */
 .about_hero {

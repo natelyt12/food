@@ -1,7 +1,3 @@
-// =============================================================================
-// XỬ LÝ FORM "ĐĂNG KÝ THEO DÕI" BẰNG ALERT THÔNG BÁO (VALIDATION ĐẦY ĐỦ NGẮN/DÀI)
-// =============================================================================
-
 // Chờ toàn bộ trang web tải xong rồi mới chạy mã JavaScript
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -111,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // ---------------------------------------------------------------------
         // 4. KHI TẤT CẢ THÔNG TIN ĐỀU HỢP LỆ
         // ---------------------------------------------------------------------
-        alert("🎉 Chúc mừng bạn " + fullname + " đã đăng ký theo dõi thành công!\n\nThông tin ẩm thực mới nhất sẽ được gửi đến hòm thư: " + email);
+        alert("Bạn đã đăng ký theo dõi thành công!\n\nThông tin ẩm thực mới nhất sẽ được gửi đến hòm thư: " + email);
 
         // Xóa trắng form sau khi gửi thành công
         form.reset();

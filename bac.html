@@ -7,64 +7,64 @@
     <title>Ẩm thực Miền Bắc - Tinh hoa ẩm thực Việt Nam</title>
     <!-- CSS dùng chung (navbar, footer, reset) và CSS riêng cho trang vùng miền -->
     <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/region.css">
+    <link rel="stylesheet" href="./css/bac.css">
 </head>
 
 <body>
     <!-- =================================================================
          1. THANH ĐIỀU HƯỚNG (HEADER & NAVBAR)
          ================================================================= -->
-        <header class="navbar">
-            <a href="./index.html" class="logo_link">
-                <span class="logo">Ẩm thực Việt Nam</span>
-            </a>
+    <header class="navbar">
+        <a href="./index.html" class="logo_link">
+            <span class="logo">Ẩm thực Việt Nam</span>
+        </a>
 
-                <nav class="nav_link">
-                    <a href="./index.html">Trang chủ</a>
-                    <a href="./bac.html" class="nav_active">Miền Bắc</a>
-                    <a href="./trung.html">Miền Trung</a>
-                    <a href="./nam.html">Miền Nam</a>
-                    <a href="./about.html">Giới thiệu</a>
-                    <a href="./subscribe.html">Đăng ký theo dõi</a>
-                </nav>
+        <nav class="nav_link">
+            <a href="./index.html">Trang chủ</a>
+            <a href="./bac.html" class="nav_active">Miền Bắc</a>
+            <a href="./trung.html">Miền Trung</a>
+            <a href="./nam.html">Miền Nam</a>
+            <a href="./about.html">Giới thiệu</a>
+            <a href="./subscribe.html">Đăng ký theo dõi</a>
+        </nav>
     </header>
 
     <!-- =================================================================
          2. NỘI DUNG CHÍNH (MAIN CONTENT)
          ================================================================= -->
     <main>
-            <!-- Phần mở đầu: Giới thiệu miền Bắc và bản đồ tương tác -->
-            <section class="hero_section">
-                <div class="hero_content">
-                    <!-- Cột trái: Tiêu đề và mô tả ẩm thực Bắc Bộ -->
-                    <div class="hero_left">
-                        <p class="sub_vn">Ẩm thực</p>
-                        <p class="vn">Miền Bắc</p>
-                        <p class="hvds">Vị thanh tao, đượm hồn đất Bắc</p>
-                        <p class="desc">
-                            Miền Bắc nước ta là vùng đất chịu nhiều ảnh hưởng từ các triều đại phong kiến,
-                            trong
-                            đó, thủ đô Hà Nội chính là nơi lưu giữ nhiều nét tinh hoa ẩm thực đặc trưng.
-                            Điểm
-                            chung của ẩm thực miền Bắc đó là sự đơn giản nhưng lại vô cùng tinh tế từ công
-                            đoạn
-                            chế biến, trình bày cho đến tên gọi của các món ăn.
-                        </p>
-                        <a class="explore_now" href="#specialties">Khám phá ngay!</a>
-                    </div>
-
-                    <!-- Cột phải: Bản đồ SVG miền Bắc 3D -->
-                    <div class="hero_right">
-                        <div class="map_wrapper">
-                            <object type="image/svg+xml" data="./assets/map-north.svg" class="hero_map"
-                                style="aspect-ratio: 288 / 232;" aria-label="Bản đồ Ẩm thực Miền Bắc">
-                            </object>
-                        </div>
-                    </div>
+        <!-- Phần mở đầu: Giới thiệu miền Bắc và bản đồ tương tác -->
+        <section class="hero_section">
+            <div class="hero_content">
+                <!-- Cột trái: Tiêu đề và mô tả ẩm thực Bắc Bộ -->
+                <div class="hero_left">
+                    <p class="sub_vn">Ẩm thực</p>
+                    <p class="vn">Miền Bắc</p>
+                    <p class="hvds">Vị thanh tao, đượm hồn đất Bắc</p>
+                    <p class="desc">
+                        Miền Bắc nước ta là vùng đất chịu nhiều ảnh hưởng từ các triều đại phong kiến,
+                        trong
+                        đó, thủ đô Hà Nội chính là nơi lưu giữ nhiều nét tinh hoa ẩm thực đặc trưng.
+                        Điểm
+                        chung của ẩm thực miền Bắc đó là sự đơn giản nhưng lại vô cùng tinh tế từ công
+                        đoạn
+                        chế biến, trình bày cho đến tên gọi của các món ăn.
+                    </p>
+                    <a class="explore_now" href="#specialties">Khám phá ngay!</a>
                 </div>
 
-                <!-- Dải màu trắng chuyển mờ để nối mượt xuống phần nội dung dưới -->
-                <div class="white_gradient" id="specialties"></div>
+                <!-- Cột phải: Bản đồ SVG miền Bắc 3D -->
+                <div class="hero_right">
+                    <div class="map_wrapper">
+                        <object type="image/svg+xml" data="./assets/map-north.svg" class="hero_map"
+                            style="aspect-ratio: 288 / 232;" aria-label="Bản đồ Ẩm thực Miền Bắc">
+                        </object>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dải màu trắng chuyển mờ để nối mượt xuống phần nội dung dưới -->
+            <div class="white_gradient" id="specialties"></div>
         </section>
 
         <!-- Danh sách đặc sản ẩm thực miền Bắc -->
@@ -136,85 +136,85 @@
                 </div>
 
                 <div class="specialties_triplet_grid">
-                        <!-- Cột 1: Bún Chả Hà Nội -->
-                        <article class="triplet_column">
-                            <div class="triplet_img_box">
-                                <img src="./assets/bac/buncha.webp" alt="Bún Chả Hà Nội">
-                                <span class="triplet_province_tag">Hà Nội</span>
-                            </div>
-                            <div class="triplet_content_box">
-                                <h3 class="triplet_dish_title">Bún Chả Hà Nội</h3>
-                                <p class="triplet_dish_subtitle">Đượm khói bếp than hoa</p>
-                                <div class="triplet_divider"></div>
-                                <p class="triplet_desc">
-                                    Bún chả hấp dẫn người qua đường từ chính mùi khói nướng thơm lừng lan tỏa khắp các
-                                    ngõ
-                                    phố cổ. Món ăn gồm hai loại chả: chả miếng làm từ thịt ba chỉ thái mỏng ướp mắm tiêu
-                                    hành củ, và chả viên băm nhuyễn nắn tròn, tất cả được kẹp que tre hoặc nướng vỉ trên
-                                    than củi hồng rực cho đến khi cháy xém cạnh. Điểm kết nối của món ăn là bát nước mắm
-                                    pha
-                                    ấm nóng đủ vị chua thanh của giấm bỗng, ngọt dịu của đường và mặn mòi của cốt mắm,
-                                    thả
-                                    thêm vài lát đu đủ xanh bóp giòn. Chấm từng gắp bún sợi nhỏ vào bát nước chấm ngập
-                                    thịt
-                                    nướng, ăn kèm lá tía tô, kinh giới, tạo nên sự bùng nổ hương vị đầy lôi cuốn.
-                                </p>
-                            </div>
+                    <!-- Cột 1: Bún Chả Hà Nội -->
+                    <article class="triplet_column">
+                        <div class="triplet_img_box">
+                            <img src="./assets/bac/buncha.webp" alt="Bún Chả Hà Nội">
+                            <span class="triplet_province_tag">Hà Nội</span>
+                        </div>
+                        <div class="triplet_content_box">
+                            <h3 class="triplet_dish_title">Bún Chả Hà Nội</h3>
+                            <p class="triplet_dish_subtitle">Đượm khói bếp than hoa</p>
+                            <div class="triplet_divider"></div>
+                            <p class="triplet_desc">
+                                Bún chả hấp dẫn người qua đường từ chính mùi khói nướng thơm lừng lan tỏa khắp các
+                                ngõ
+                                phố cổ. Món ăn gồm hai loại chả: chả miếng làm từ thịt ba chỉ thái mỏng ướp mắm tiêu
+                                hành củ, và chả viên băm nhuyễn nắn tròn, tất cả được kẹp que tre hoặc nướng vỉ trên
+                                than củi hồng rực cho đến khi cháy xém cạnh. Điểm kết nối của món ăn là bát nước mắm
+                                pha
+                                ấm nóng đủ vị chua thanh của giấm bỗng, ngọt dịu của đường và mặn mòi của cốt mắm,
+                                thả
+                                thêm vài lát đu đủ xanh bóp giòn. Chấm từng gắp bún sợi nhỏ vào bát nước chấm ngập
+                                thịt
+                                nướng, ăn kèm lá tía tô, kinh giới, tạo nên sự bùng nổ hương vị đầy lôi cuốn.
+                            </p>
+                        </div>
                     </article>
 
-                        <!-- Cột 2: Chả Mực Giã Tay Hạ Long -->
-                        <article class="triplet_column">
-                            <div class="triplet_img_box">
-                                <img src="./assets/bac/chamuc.jpg" alt="Chả Mực Giã Tay Hạ Long">
-                                <span class="triplet_province_tag">Quảng Ninh</span>
-                            </div>
-                            <div class="triplet_content_box">
-                                <h3 class="triplet_dish_title">Chả Mực Giã Tay Hạ Long</h3>
-                                <p class="triplet_dish_subtitle">Đậm đà vị biển</p>
-                                <div class="triplet_divider"></div>
-                                <p class="triplet_desc">
-                                    Không dùng máy xay công nghiệp, chả mực Hạ Long nhất định phải được giã hoàn toàn
-                                    bằng
-                                    tay trong cối đá lớn để giữ trọn từng thớ thịt mực giòn sần sật. Nguyên liệu làm chả
-                                    là
-                                    những con mực mai tươi sống vừa đánh bắt từ vùng vịnh kín gió, thịt dày và ngọt đậm.
-                                    Mực
-                                    giã đạt độ kết dính tự nhiên, trộn cùng chút hạt tiêu bắc và hành thì là rồi nặn
-                                    thành
-                                    miếng dẹt thả vào chảo dầu sôi sùng sục. Miếng chả vừa vớt ra vàng ươm, căng phồng,
-                                    cắn
-                                    vào cảm nhận rõ độ dai giòn rôm rốp và vị ngọt đậm đà của biển cả, ngon nhất khi
-                                    chấm
-                                    tương ớt cay hoặc ăn kèm xôi trắng nóng hổi.
-                                </p>
-                            </div>
+                    <!-- Cột 2: Chả Mực Giã Tay Hạ Long -->
+                    <article class="triplet_column">
+                        <div class="triplet_img_box">
+                            <img src="./assets/bac/chamuc.jpg" alt="Chả Mực Giã Tay Hạ Long">
+                            <span class="triplet_province_tag">Quảng Ninh</span>
+                        </div>
+                        <div class="triplet_content_box">
+                            <h3 class="triplet_dish_title">Chả Mực Giã Tay Hạ Long</h3>
+                            <p class="triplet_dish_subtitle">Đậm đà vị biển</p>
+                            <div class="triplet_divider"></div>
+                            <p class="triplet_desc">
+                                Không dùng máy xay công nghiệp, chả mực Hạ Long nhất định phải được giã hoàn toàn
+                                bằng
+                                tay trong cối đá lớn để giữ trọn từng thớ thịt mực giòn sần sật. Nguyên liệu làm chả
+                                là
+                                những con mực mai tươi sống vừa đánh bắt từ vùng vịnh kín gió, thịt dày và ngọt đậm.
+                                Mực
+                                giã đạt độ kết dính tự nhiên, trộn cùng chút hạt tiêu bắc và hành thì là rồi nặn
+                                thành
+                                miếng dẹt thả vào chảo dầu sôi sùng sục. Miếng chả vừa vớt ra vàng ươm, căng phồng,
+                                cắn
+                                vào cảm nhận rõ độ dai giòn rôm rốp và vị ngọt đậm đà của biển cả, ngon nhất khi
+                                chấm
+                                tương ớt cay hoặc ăn kèm xôi trắng nóng hổi.
+                            </p>
+                        </div>
                     </article>
 
-                        <!-- Cột 3: Thịt Dê Núi Ninh Bình -->
-                        <article class="triplet_column">
-                            <div class="triplet_img_box">
-                                <img src="./assets/bac/thitde.jpg" alt="Thịt Dê Núi Ninh Bình">
-                                <span class="triplet_province_tag">Ninh Bình</span>
-                            </div>
-                            <div class="triplet_content_box">
-                                <h3 class="triplet_dish_title">Thịt Dê Núi Ninh Bình</h3>
-                                <p class="triplet_dish_subtitle">Sản vật non nước Cố đô</p>
-                                <div class="triplet_divider"></div>
-                                <p class="triplet_desc">
-                                    Nhờ địa hình núi đá vôi đặc thù, dê Ninh Bình được chăn thả tự nhiên leo trèo trên
-                                    vách
-                                    đá và ăn các loại lá thuốc rừng, giúp thớ thịt săn chắc, ít mỡ và thơm ngọt khác
-                                    biệt.
-                                    Trong các cách chế biến, dê tái chanh là món ăn tôn vinh độ tươi ngon nguyên bản
-                                    nhất:
-                                    thịt dê thái lát mỏng trần chín tới, bóp đều với nước cốt chanh tươi, gừng, sả bào
-                                    mỏng
-                                    và lá chanh thái chỉ. Cuốn miếng thịt dê mềm ngọt cùng lá sung non, chuối chát, khế
-                                    chua
-                                    rồi chấm ngập trong chén tương gừng Bến Ngoại sánh vàng bùi béo, tạo nên sự cân bằng
-                                    hoàn hảo giữa tính hàn và nhiệt của triết lý ẩm thực truyền thống.
-                                </p>
-                            </div>
+                    <!-- Cột 3: Thịt Dê Núi Ninh Bình -->
+                    <article class="triplet_column">
+                        <div class="triplet_img_box">
+                            <img src="./assets/bac/thitde.jpg" alt="Thịt Dê Núi Ninh Bình">
+                            <span class="triplet_province_tag">Ninh Bình</span>
+                        </div>
+                        <div class="triplet_content_box">
+                            <h3 class="triplet_dish_title">Thịt Dê Núi Ninh Bình</h3>
+                            <p class="triplet_dish_subtitle">Sản vật non nước Cố đô</p>
+                            <div class="triplet_divider"></div>
+                            <p class="triplet_desc">
+                                Nhờ địa hình núi đá vôi đặc thù, dê Ninh Bình được chăn thả tự nhiên leo trèo trên
+                                vách
+                                đá và ăn các loại lá thuốc rừng, giúp thớ thịt săn chắc, ít mỡ và thơm ngọt khác
+                                biệt.
+                                Trong các cách chế biến, dê tái chanh là món ăn tôn vinh độ tươi ngon nguyên bản
+                                nhất:
+                                thịt dê thái lát mỏng trần chín tới, bóp đều với nước cốt chanh tươi, gừng, sả bào
+                                mỏng
+                                và lá chanh thái chỉ. Cuốn miếng thịt dê mềm ngọt cùng lá sung non, chuối chát, khế
+                                chua
+                                rồi chấm ngập trong chén tương gừng Bến Ngoại sánh vàng bùi béo, tạo nên sự cân bằng
+                                hoàn hảo giữa tính hàn và nhiệt của triết lý ẩm thực truyền thống.
+                            </p>
+                        </div>
                     </article>
                 </div>
             </div>
@@ -224,22 +224,22 @@
     <!-- =================================================================
          3. CHÂN TRANG (FOOTER)
          ================================================================= -->
-        <footer class="footer">
-            <div class="footer_content">
-                <h3 class="footer_logo">Ẩm thực Việt Nam</h3>
-                <p class="footer_desc">Hành trình tôn vinh và lan tỏa nét tinh hoa văn hóa ẩm thực ba miền Bắc - Trung -
-                    Nam.</p>
-                <div class="footer_links">
-                    <a href="./index.html">Trang chủ</a>
-                    <a href="./bac.html">Miền Bắc</a>
-                    <a href="./trung.html">Miền Trung</a>
-                    <a href="./nam.html">Miền Nam</a>
-                    <a href="./about.html">Giới thiệu</a>
-                    <a href="./subscribe.html">Đăng ký theo dõi</a>
-                </div>
-                <div class="footer_divider"></div>
-                <p class="footer_copy">Sản phẩm của Phúc Thanh, Ngọc Khánh, Yến Nhi</p>
+    <footer class="footer">
+        <div class="footer_content">
+            <h3 class="footer_logo">Ẩm thực Việt Nam</h3>
+            <p class="footer_desc">Hành trình tôn vinh và lan tỏa nét tinh hoa văn hóa ẩm thực ba miền Bắc - Trung -
+                Nam.</p>
+            <div class="footer_links">
+                <a href="./index.html">Trang chủ</a>
+                <a href="./bac.html">Miền Bắc</a>
+                <a href="./trung.html">Miền Trung</a>
+                <a href="./nam.html">Miền Nam</a>
+                <a href="./about.html">Giới thiệu</a>
+                <a href="./subscribe.html">Đăng ký theo dõi</a>
             </div>
+            <div class="footer_divider"></div>
+            <p class="footer_copy">Sản phẩm của Phúc Thanh, Ngọc Khánh, Yến Nhi</p>
+        </div>
     </footer>
 </body>
 

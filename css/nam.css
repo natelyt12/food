@@ -1,14 +1,3 @@
-/* ==========================================================================
-   nam.css — Kiểu dáng cho trang Ẩm thực Miền Nam (nam.html)
-   Phong cách: Tạp chí ẩm thực (Editorial Magazine) — Tĩnh tại, tao nhã.
-   Chỉ sử dụng 2 font chữ: Lora (tiêu đề/trích dẫn) và Open Sans (thân bài/chú thích).
-   Code rõ ràng, chú thích chi tiết, phù hợp cho người mới làm quen.
-   ========================================================================== */
-
-/* --------------------------------------------------------------------------
-   1. KHUNG BAO NGOÀI TOÀN BỘ NỘI DUNG (SECTION & CONTAINER)
-   -------------------------------------------------------------------------- */
-
 /* Khung nền trắng toàn màn hình chứa toàn bộ nội dung của trang miền Nam */
 .south_wrapper {
     width: 100%;
